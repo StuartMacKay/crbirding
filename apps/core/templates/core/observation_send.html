@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Send observation{% endblock %}
+
+{% block content %}
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-bold text-gray-900">Send this observation on</h1>
+    <p class="mt-1 text-sm text-gray-600">
+      {{ observation.get_species_display }} seen {{ observation.date }} at
+      {{ observation.location.get_name }}.
+    </p>
+
+    <div class="mt-6 bg-white border border-gray-200 rounded-lg p-4">
+      <h2 class="text-sm font-semibold text-gray-900">Report text</h2>
+      <p class="mt-1 text-xs text-gray-500">Copy this into an email, or use one of the
+        links
+        below if a project is shown.</p>
+      <textarea readonly rows="4"
+                class="mt-3 block w-full rounded-md border-gray-300 text-sm font-mono shadow-sm bg-gray-50"
+      >{{ report_text }}</textarea>
+    </div>
+
+    <div class="mt-6 bg-white border border-gray-200 rounded-lg p-4">
+      <h2 class="text-sm font-semibold text-gray-900">Where to send it</h2>
+
+      {% if not matches %}
+        <p class="mt-2 text-sm text-gray-600">
+          No matching project found yet -- there's no Origin record linked to
+          this
+          observation, and no Rule matches its tags. You can still send the report text
+          above yourself if you know who to send it to.
+        </p>
+      {% endif %}
+
+      {% for project, definite in matches %}
+        <div class="mt-3 border border-gray-200 rounded-md p-3">
+          <p class="text-sm font-medium text-gray-900">
+            {{ project.name }}
+            {% if definite %}
+              <span class="ml-1 text-xs font-normal text-green-700">(matched by ringing record)</span>
+            {% else %}
+              <span class="ml-1 text-xs font-normal text-amber-700">(possible match, from its colour-mark scheme)</span>
+            {% endif %}
+          </p>
+          <p class="text-xs text-gray-500">Coordinator: {{ project.coordinator }}</p>
+          <div class="mt-2 flex flex-wrap gap-3">
+            {% if project.contact %}
+              <a
+                href="mailto:{{ project.contact }}?subject={{ subject|urlencode }}&body={{ report_text|urlencode }}"
+                class="text-sm text-accent-700 hover:text-accent-800 font-medium">
+                Email {{ project.contact }}
+              </a>
+            {% endif %}
+            {% if project.submit %}
+              <a href="{{ project.submit }}" target="_blank" rel="noopener"
+                 class="text-sm text-accent-700 hover:text-accent-800 font-medium">
+                Open submission page
+              </a>
+            {% endif %}
+            {% if not project.contact and not project.submit %}
+              <span class="text-xs text-gray-500">No contact details recorded for this project.</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

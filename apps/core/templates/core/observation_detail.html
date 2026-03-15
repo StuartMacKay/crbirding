@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Observation{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'core/copy_element.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <a href="{{ back_url }}"
+       class="text-sm text-accent-700 hover:underline">&larr; My Observations</a>
+
+    <div class="mt-2 flex flex-wrap items-center gap-3">
+      <h1
+        class="text-2xl font-bold text-gray-900">{{ observation.get_species_display }}</h1>
+      {% if origin %}
+        <span
+          class="inline-block px-2 py-0.5 rounded-full bg-gray-50 border border-gray-200 text-xs font-medium text-gray-500">Closed</span>
+      {% else %}
+        <span
+          class="inline-block px-2 py-0.5 rounded-full bg-green-50 border border-green-200 text-xs font-medium text-green-800">Open</span>
+      {% endif %}
+    </div>
+
+    {# 1. The observation, ready to paste into an email. #}
+    <section class="mt-6 bg-white border border-gray-200 rounded-lg p-4"
+             x-data="{ copied: false }">
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="text-sm font-semibold text-gray-900">Report</h2>
+        <div class="flex gap-4 text-sm">
+          <button type="button" id="copy-report"
+                  class="text-accent-700 hover:underline"
+                  @click="copyElement($refs.report).then(() => { copied = true; setTimeout(() => copied = false, 2000); })"
+                  x-text="copied ? 'Copied' : 'Copy'">Copy
+          </button>
+          <a href="{% url 'core:observation-edit' observation.pk %}"
+             class="text-accent-700 hover:underline">Edit</a>
+        </div>
+      </div>
+      <div class="mt-3 text-gray-900" x-ref="report" id="report">
+        {% include "core/_observation_email.html" %}
+      </div>
+    </section>
+
+    {# 2. What's been done about it so far. #}
+    <section class="mt-6 bg-white border border-gray-200 rounded-lg p-4">
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="text-sm font-semibold text-gray-900">History</h2>
+        <a href="{% url 'core:observation-events' observation.pk %}"
+           class="text-sm text-accent-700 hover:underline">Edit</a>
+      </div>
+      {% if events %}
+        <ul class="mt-3 divide-y divide-gray-100 text-sm">
+          {% for event in events %}
+            <li class="py-2 flex gap-4">
+              <span
+                class="w-28 shrink-0 text-gray-500">{{ event.date|date:"j N Y" }}</span>
+              <span class="text-gray-900">{{ event.description }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="mt-2 text-sm text-gray-500">No events recorded yet.</p>
+      {% endif %}
+    </section>
+
+    {# 3. Who marked the bird -- known, or the best guesses. #}
+    <section class="mt-6 bg-white border border-gray-200 rounded-lg p-4">
+      {% if origin %}
+        <h2 class="text-sm font-semibold text-gray-900">Recovery</h2>
+        <div class="mt-3">
+          {% include "core/_recovery.html" %}
+        </div>
+        {% if recovery.marking.project %}
+          {% include "core/_project_contact_links.html" with project=recovery.marking.project report_element="#report" %}
+        {% endif %}
+        {% if origin.notes %}
+          <p class="mt-3 text-sm text-gray-700 whitespace-pre-line"><span
+            class="text-gray-500">Notes:</span> {{ origin.notes }}</p>
+        {% endif %}
+        <div class="mt-4 flex flex-wrap gap-4 text-sm">
+          <a href="{% url 'core:origin-history' origin.pk %}"
+             class="text-accent-700 hover:underline">View life history</a>
+          {% if origin.history_url %}
+            <a href="{{ origin.history_url }}" target="_blank" rel="noopener"
+               class="text-accent-700 hover:underline">Life history (project site)</a>
+          {% endif %}
+          {% if origin.history_file %}
+            <a href="{{ origin.history_file.url }}" target="_blank" rel="noopener"
+               class="text-accent-700 hover:underline">Life history file</a>
+          {% endif %}
+        </div>
+      {% else %}
+        <h2 class="text-sm font-semibold text-gray-900">Matching projects</h2>
+        {% if matches %}
+          <p class="mt-1 text-xs text-gray-500">
+            Projects whose colour-mark scheme matches this bird's marks.
+          </p>
+          {% for project in matches %}
+            <div class="mt-3 border border-gray-200 rounded-md p-3">
+              <p class="text-sm font-medium text-gray-900">{{ project.name }}</p>
+              <p class="text-xs text-gray-500">
+                Coordinator: {{ project.coordinator }}</p>
+              {% include "core/_project_contact_links.html" with report_element="#report" %}
+            </div>
+          {% endfor %}
+        {% else %}
+          <p class="mt-2 text-sm text-gray-600">
+            No project's colour-mark scheme matches this bird's marks.
+          </p>
+        {% endif %}
+        {% if user.is_staff %}
+          <a
+            href="{% url 'core:origin-submit' %}?observation={{ observation.pk }}&next={{ request.get_full_path|urlencode }}"
+            class="mt-4 inline-block bg-accent-600 hover:bg-accent-500 text-white text-xs font-medium px-3 py-1.5 rounded-md transition-colors">
+            Add ringing details
+          </a>
+        {% endif %}
+      {% endif %}
+    </section>
+
+    {% if possible_sightings %}
+      {# Staff only -- see ObservationDetailView. #}
+      <section class="mt-6 bg-white border border-amber-200 rounded-lg p-4" id="possible-sightings">
+        <h2 class="text-sm font-semibold text-gray-900">Possible sightings of this bird</h2>
+        <p class="mt-1 text-xs text-gray-500">
+          Open sightings of the same species whose tags match this bird's once "?" is
+          ignored -- a ring one observer wasn't sure of. Check the differences before
+          linking.
+        </p>
+        <ul class="mt-3 divide-y divide-gray-100 text-sm">
+          {% for possible in possible_sightings %}
+            <li class="py-3 flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <a href="{% url 'core:observation-detail' possible.observation.pk %}"
+                   class="text-accent-700 hover:underline">
+                  {{ possible.observation.date|date:"j N Y" }} at
+                  {{ possible.observation.location.get_name }}</a>
+                {% for difference in possible.differences %}
+                  <p class="mt-1 text-xs text-gray-600">
+                    {{ difference.position }}:
+                    <span class="font-mono text-amber-800">{{ difference.code }}</span>
+                    here vs <span class="font-mono">{{ difference.linked_code }}</span>
+                  </p>
+                {% empty %}
+                  <p class="mt-1 text-xs text-gray-600">Exactly the same tags.</p>
+                {% endfor %}
+              </div>
+              <form method="post" action="{% url 'core:observation-link' possible.observation.pk %}">
+                {% csrf_token %}
+                <input type="hidden" name="origin" value="{{ origin.pk }}">
+                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                <button type="submit"
+                        class="bg-accent-600 hover:bg-accent-500 text-white text-xs font-medium px-3 py-1.5 rounded-md transition-colors">
+                  Link
+                </button>
+              </form>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+  </div>
+{% endblock %}

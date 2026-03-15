@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Check your email{% endblock %}
+
+{% block content %}
+  <div class="max-w-md mx-auto px-4 py-12">
+    <h1 class="text-2xl font-bold text-gray-900 mb-6">Check your email</h1>
+    <p class="text-sm text-gray-600">
+      We've sent a confirmation link to the address you signed up with. Click
+      it to finish creating your account -- it expires in 3 days.
+    </p>
+    <p class="mt-4 text-sm text-gray-600">
+      Already confirmed? <a href="{% url 'account_login' %}"
+                            class="text-accent-700 hover:underline">Sign in</a>
+    </p>
+    {% if can_resend %}
+      <form method="post" action="{% url 'accounts:resend_verification' %}" class="mt-4">
+        {% csrf_token %}
+        <button type="submit" class="text-sm text-accent-700 hover:underline">
+          Didn't get it? Resend the link
+        </button>
+      </form>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+
+.*
+!.dockerignore
+!.editorconfig
+!.env.development
+!.env.production
+!.gitignore
+!.pre-commit-config.yaml
+
+media
+
+# Local SQLite database
+*.db
+*.sqlite3

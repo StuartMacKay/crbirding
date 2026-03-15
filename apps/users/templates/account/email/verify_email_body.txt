@@ -1,0 +1,7 @@
+Thanks for signing up.
+
+Click the link below to confirm your email address and finish creating your account:
+
+{{ url }}
+
+This link expires in 3 days. If you didn't sign up, you can ignore this email -- no account has been created yet.

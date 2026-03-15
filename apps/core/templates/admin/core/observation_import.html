@@ -1,0 +1,46 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+  <p><a href="../">{% translate "Back to list" %}</a></p>
+
+  {% blocktranslate %}
+    <h2>CSV format</h2>
+    <p>One row per observation.</p>
+    <ul>
+      <li>species (required; euring code, code, or name)</li>
+      <li>age, sex (both optional, default to unknown; either the EURING code
+        or the display label works for each, e.g. "9" or "4CY", "M" or "Male")</li>
+      <li>date (required; YYYY-MM-DD)</li>
+      <li>time (optional; HH:MM)</li>
+      <li>location, region, country (all required; region and country narrow which
+        location a name means -- either the EURING code or the display label works
+        for region/country. Creates a new location, from this row's own latitude,
+        longitude, and accuracy, if none matches all three)</li>
+      <li>latitude (decimal; required to add a new location, otherwise optional)</li>
+      <li>longitude (decimal; required to add a new location, otherwise optional)</li>
+      <li>accuracy (metres; required to add a new location, otherwise optional)</li>
+      <li>observer (required; the observer's name -- created if none matches)</li>
+      <li>notes (optional)</li>
+      <li>left_above, left_below, left_wing, nasal_saddle, neck_collar,
+        right_above, right_below, right_wing (one column per tag position;
+        each optional, but at least one must be present and, for a given
+        row, at least one must have a value)</li>
+    </ul>
+
+    <p>Each position column holds the tag(s) worn at that position only,
+      e.g. a right_below of "BW(A123)" or, for two rings stacked at the
+      same position read top to bottom, "O,Y". Inscriptions are written as
+      read top to bottom too; anything about which way they read belongs
+      in the notes.</p>
+
+    <p>The coordinates override those for the location, for this sighting only.
+      Values are saved to 4 decimal place, giving a positional accuracy of 10m.</p>
+  {% endblocktranslate %}
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="{% translate 'Import' %}">
+  </form>
+{% endblock %}

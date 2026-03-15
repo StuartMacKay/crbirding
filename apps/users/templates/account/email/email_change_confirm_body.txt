@@ -1,0 +1,7 @@
+Someone requested to change the email address on their account to this one.
+
+Click the link below to confirm and complete the change:
+
+{{ url }}
+
+This link expires in 1 day. If you didn't request this, you can ignore this email -- nothing changes until the link above is clicked.

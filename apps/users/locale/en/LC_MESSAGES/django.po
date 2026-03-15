@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-23 13:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: admin.py:18
+msgid "Preferences"
+msgstr ""
+
+#: admin.py:20
+msgid "Permissions"
+msgstr ""
+
+#: admin.py:32
+msgid "Timestamps"
+msgstr ""
+
+#: models.py:12
+msgid "An email address must be provided."
+msgstr ""
+
+#: models.py:29
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: models.py:31
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: models.py:46
+msgid "created at"
+msgstr ""
+
+#: models.py:47
+msgid "The date and time when this account was created."
+msgstr ""
+
+#: models.py:51
+msgid "updated at"
+msgstr ""
+
+#: models.py:52
+msgid "The date and time when this account was last updated."
+msgstr ""
+
+#: models.py:56
+msgid "email address"
+msgstr ""
+
+#: models.py:57
+msgid "The email address used to log in."
+msgstr ""
+
+#: models.py:62
+msgid "language"
+msgstr ""
+
+#: models.py:63
+msgid "The language code used to display the user interface."
+msgstr ""
+
+#: models.py:67
+msgid "Automatic (based on language)"
+msgstr ""
+
+#: models.py:70
+msgid "alphabet"
+msgstr ""
+
+#: models.py:72
+msgid ""
+"The preferred alphabet for displaying place names, e.g. Latin or Cyrillic "
+"for a Serbian user. Leave as automatic to use the default for the selected "
+"language."
+msgstr ""
+
+#: models.py:83
+msgid "user"
+msgstr ""
+
+#: models.py:84
+msgid "users"
+msgstr ""

@@ -1,0 +1,24 @@
+<div class="mt-2 space-y-1 text-sm">
+  {% if project.contact %}
+    {% comment %}
+      With `report_element` (a CSS selector) the body is taken from that
+      element on the page as it's clicked -- see mailtoWithBody() in
+      core/copy_element.js -- with `report_text` only as the no-JS fallback.
+    {% endcomment %}
+    <div class="flex flex-wrap items-baseline gap-x-3">
+      <a
+        href="mailto:{{ project.contact }}?subject={{ subject|urlencode }}&body={{ report_text|urlencode }}"
+        {% if report_element %}onclick="mailtoWithBody(this, document.querySelector('{{ report_element }}'))"{% endif %}
+        class="text-accent-700 hover:text-accent-800 font-medium">Send email</a>
+    </div>
+  {% endif %}
+  {% if project.submit %}
+    <div class="flex flex-wrap items-baseline gap-x-3">
+      <a href="{{ project.submit }}" target="_blank" rel="noopener"
+         class="text-accent-700 hover:text-accent-800 font-medium">Submit online</a>
+    </div>
+  {% endif %}
+  {% if not project.contact and not project.submit %}
+    <p class="text-xs text-gray-500">No contact details recorded for this project.</p>
+  {% endif %}
+</div>
