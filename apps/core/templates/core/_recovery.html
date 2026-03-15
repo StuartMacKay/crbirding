@@ -1,0 +1,71 @@
+{% comment %}
+  A marked bird seen again: where and when it was ringed alongside
+  where and when it was seen, and how far and how long between the two.
+  Takes `recovery` (core.utils.formatting.Recovery).
+{% endcomment %}
+{% with marking=recovery.marking sighting=recovery.sighting %}
+  <div class="overflow-x-auto">
+    <table class="min-w-full text-sm">
+      <thead>
+      <tr>
+        <th scope="col"><span class="sr-only">Detail</span></th>
+        <th scope="col" class="pb-2 pr-4 text-left font-semibold text-gray-900">Ringed</th>
+        <th scope="col" class="pb-2 text-left font-semibold text-gray-900">Seen</th>
+      </tr>
+      </thead>
+      <tbody class="align-top">
+      <tr>
+        <th scope="row" class="py-1 pr-4 text-left font-normal text-gray-500 whitespace-nowrap">Date</th>
+        <td class="py-1 pr-4 text-gray-900">
+          {{ marking.date|date:"j N Y" }}{% if marking.time %} {{ marking.time|time:"H:i" }}{% endif %}
+        </td>
+        <td class="py-1 text-gray-900">
+          {{ sighting.date|date:"j N Y" }}{% if sighting.time %} {{ sighting.time|time:"H:i" }}{% endif %}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="py-1 pr-4 text-left font-normal text-gray-500 whitespace-nowrap">Place</th>
+        <td class="py-1 pr-4 text-gray-900">
+          {{ marking.place }}
+          {% if marking.coordinates %}<span class="block text-xs text-gray-500">{{ marking.coordinates }}</span>{% endif %}
+        </td>
+        <td class="py-1 text-gray-900">
+          {{ sighting.place }}
+          {% if sighting.coordinates %}<span class="block text-xs text-gray-500">{{ sighting.coordinates }}</span>{% endif %}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row" class="py-1 pr-4 text-left font-normal text-gray-500 whitespace-nowrap">Colour marks</th>
+        <td class="py-1 pr-4 font-mono text-gray-900">{{ marking.label|default:"—" }}</td>
+        <td class="py-1 font-mono text-gray-900">{{ sighting.marks|default:"—" }}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="py-1 pr-4 text-left font-normal text-gray-500 whitespace-nowrap">Age</th>
+        <td class="py-1 pr-4 text-gray-900">{{ marking.age|default:"Unknown" }}</td>
+        <td class="py-1 text-gray-900">{{ sighting.age|default:"Unknown" }}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="py-1 pr-4 text-left font-normal text-gray-500 whitespace-nowrap">Sex</th>
+        <td class="py-1 pr-4 text-gray-900">{{ marking.sex|default:"Unknown" }}</td>
+        <td class="py-1 text-gray-900">{{ sighting.sex|default:"Unknown" }}</td>
+      </tr>
+      <tr>
+        <th scope="row" class="py-1 pr-4 text-left font-normal text-gray-500 whitespace-nowrap">By</th>
+        <td class="py-1 pr-4 text-gray-900">
+          {% if marking.project %}
+            {{ marking.project.name }}
+            <span class="block text-xs text-gray-500">{{ marking.project.coordinator }}</span>
+          {% else %}—{% endif %}
+        </td>
+        <td class="py-1 text-gray-900">{{ sighting.observers|default:"—" }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mt-3 text-sm text-gray-700">
+    {{ recovery.distance_km|floatformat:0 }} km {{ recovery.direction }}
+    ({{ recovery.bearing|floatformat:0 }}°){% if recovery.days is not None %},
+    {{ recovery.days }} day{{ recovery.days|pluralize }} after ringing{% endif %}.
+  </p>
+{% endwith %}

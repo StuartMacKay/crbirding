@@ -1,0 +1,44 @@
+{% comment %}
+  One row of the observation form's tag formset (core.forms.TagFormSet):
+  a Position and the code for what's worn there. A saved tag is removed
+  with its Delete box; a row added on this page (see AddTagRowView) can
+  simply be taken off the page again.
+{% endcomment %}
+<div class="tag-row bg-gray-50 border border-gray-200 rounded-lg p-3 grid grid-cols-1 sm:grid-cols-[12rem_1fr_auto] gap-3 items-start">
+  {{ form.id }}
+
+  <div>
+    <label for="{{ form.position.id_for_label }}"
+           class="block text-xs font-medium text-gray-700">{{ form.position.label|capfirst }}</label>
+    {{ form.position }}
+    {% for error in form.position.errors %}
+      <p class="mt-1 text-xs text-red-600">{{ error }}</p>
+    {% endfor %}
+  </div>
+
+  <div>
+    <label for="{{ form.code.id_for_label }}"
+           class="block text-xs font-medium text-gray-700">{{ form.code.label|capfirst }}</label>
+    {{ form.code }}
+    {% for error in form.code.errors %}
+      <p class="mt-1 text-xs text-red-600">{{ error }}</p>
+    {% endfor %}
+  </div>
+
+  <div class="sm:pt-6">
+    {% if form.instance.pk %}
+      <label class="flex items-center gap-1.5 text-xs font-medium text-gray-700">
+        {{ form.DELETE }} Delete
+      </label>
+    {% else %}
+      <button type="button" onclick="this.closest('.tag-row').remove()"
+              class="text-xs text-red-600 hover:text-red-800">
+        Remove
+      </button>
+    {% endif %}
+  </div>
+
+  {% if form.non_field_errors %}
+    <div class="col-span-full text-xs text-red-600">{{ form.non_field_errors }}</div>
+  {% endif %}
+</div>

@@ -1,0 +1,3 @@
+Your account's login email was just changed from {{ old_email }} to {{ new_email }}.
+
+You can now sign in using this address.

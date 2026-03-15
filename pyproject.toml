@@ -1,0 +1,66 @@
+[project]
+name = "crbirding"
+version = "0.1.0"
+description = "A Django website for managing observations of colour-ringed birds"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "django>=6.0",
+  "sentry-sdk[django]>=2.19",
+  "Pillow>=11.0",
+  "anyascii>=0.3.3",
+]
+
+[dependency-groups]
+dev = [
+  "ipython>=8.30",
+  "django-debug-toolbar>=4.4",
+  "pytest-django>=4.9",
+  "factory-boy>=3.3",
+  "pytest-cov>=6.0",
+  "django-browser-reload>=1.16",
+  "polib>=1.2.0",
+  "playwright>=1.48",
+  "pytest-playwright>=0.5",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["tests.py", "test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+  "--cov=apps",
+  "--cov-report=term-missing",
+  "--cov-report=html:htmlcov",
+  "-v",
+  "-m",
+  "not e2e",
+]
+filterwarnings = [
+  "ignore::DeprecationWarning",
+]
+markers = [
+  "e2e: browser-driven end-to-end test (Playwright) -- slow, excluded by default; run explicitly with `pytest -m e2e`",
+]
+
+[tool.coverage.run]
+source = ["apps"]
+# Also report if/else paths never taken, not just lines never run.
+branch = true
+omit = [
+  "*/migrations/*",
+  "*/tests*",
+  "conftest.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "def __repr__",
+  "if self.debug:",
+  "if settings.DEBUG",
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "if __name__ == .__main__.:",
+]

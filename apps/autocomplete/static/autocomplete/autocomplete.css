@@ -1,0 +1,24 @@
+/* Minimal overrides so Tom Select matches the site's Tailwind form
+ * styling instead of its own default theme's chrome. Kept separate
+ * from vendor/tom-select.default.min.css so upgrading the vendored
+ * library doesn't require re-applying site styling by hand.
+ */
+.ts-control {
+  border-radius: 0.375rem;
+  border-color: #d1d5db;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.875rem;
+}
+
+.ts-control.focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 1px #22c55e;
+}
+
+.ts-dropdown {
+  font-size: 0.875rem;
+}
+
+.ts-dropdown .active {
+  background-color: #dcfce7;
+}

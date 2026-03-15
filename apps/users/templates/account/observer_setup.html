@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Set up your observer identity{% endblock %}
+
+{% block content %}
+  <div class="max-w-md mx-auto px-4 py-12">
+    <h1 class="text-2xl font-bold text-gray-900 mb-6">Set up your observer identity</h1>
+
+    {% if candidate %}
+      <p class="text-sm text-gray-600">
+        An observer named <strong>{{ candidate.name }}</strong> already exists -- is
+        this you?
+      </p>
+      <form method="post" class="mt-6 space-y-4">
+        {% csrf_token %}
+        <input type="hidden" name="name" value="{{ form.cleaned_data.name }}">
+        <input type="hidden" name="observer_id" value="{{ candidate.pk }}">
+        <button type="submit" name="action" value="confirm"
+                class="w-full bg-accent-600 hover:bg-accent-500 text-white font-medium px-4 py-2 rounded-md transition-colors">
+          Yes, that's me
+        </button>
+        <button type="submit" name="action" value="create_new"
+                class="w-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium px-4 py-2 rounded-md transition-colors">
+          No, create a new observer named "{{ form.cleaned_data.name }}"
+        </button>
+      </form>
+    {% else %}
+      <p class="text-sm text-gray-600">
+        This is the name your sightings will be credited to -- separate from
+        your account, and editable here or later in your account settings.
+      </p>
+      <form method="post" class="mt-6 space-y-4">
+        {% csrf_token %}
+        {% for field in form %}
+          <div>
+            <label for="{{ field.id_for_label }}"
+                   class="block text-sm font-medium text-gray-700">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+              <p class="mt-1 text-sm text-red-600">{{ field.errors|join:" " }}</p>
+            {% endif %}
+          </div>
+        {% endfor %}
+        <button type="submit"
+                class="w-full bg-accent-600 hover:bg-accent-500 text-white font-medium px-4 py-2 rounded-md transition-colors">
+          Continue
+        </button>
+      </form>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,3 @@
+Your account's login email was just changed from {{ old_email }} to {{ new_email }}.
+
+If this was you, no action is needed. If you didn't make this change, contact an administrator -- your old address ({{ old_email }}) can no longer be used to sign in.

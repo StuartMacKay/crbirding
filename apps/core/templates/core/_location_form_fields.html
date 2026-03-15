@@ -1,0 +1,83 @@
+<div class="bg-white border border-gray-200 rounded-lg p-4 space-y-4" id="location-fields">
+  <h2 class="text-sm font-semibold text-gray-900">Location</h2>
+
+  {% if location_form.non_field_errors %}
+    <div class="p-2 rounded-md bg-red-50 border border-red-200 text-xs text-red-800">
+      {{ location_form.non_field_errors }}
+    </div>
+  {% endif %}
+
+  <div>
+    <label for="{{ location_form.search.id_for_label }}"
+           class="block text-sm font-medium text-gray-700">{{ location_form.search.label }}</label>
+    {{ location_form.search }}
+    {{ location_form.search.errors }}
+    <p class="mt-1 text-xs text-gray-500">{{ location_form.search.help_text }}</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div>
+      <label for="{{ location_form.region.id_for_label }}"
+             class="block text-xs font-medium text-gray-700">{{ location_form.region.label }}</label>
+      {{ location_form.region }}
+      {{ location_form.region.errors }}
+    </div>
+    <div>
+      <label for="{{ location_form.country.id_for_label }}"
+             class="block text-xs font-medium text-gray-700">{{ location_form.country.label }}</label>
+      {{ location_form.country }}
+    </div>
+  </div>
+  <p id="location-matched-hint" class="text-xs text-gray-500" hidden>
+    Region and country shown are the selected location's own -- not editable here.
+  </p>
+  <p id="location-new-hint" class="text-xs text-gray-500" hidden>
+    Adding "<span id="location-new-hint-name"></span>" as a new location -- choose its
+    country and region above.
+  </p>
+
+  <div class="text-sm">
+    <p class="font-medium text-gray-600">Coordinates</p>
+    <p class="mt-2 text-xs text-gray-500">
+      Your own reading here is usually more accurate than a location's stored default --
+      fill these in when you have them. Required if you're adding a new location above;
+      if you picked an existing one and don't have your own reading, use the link below
+      to copy in its (less precise) default.
+    </p>
+    <button type="button" id="use-default-coordinates" hidden
+            class="mt-2 text-xs text-accent-700 hover:text-accent-800 font-medium">
+      Use this location's default coordinates
+    </button>
+    <div class="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div>
+        <label for="{{ location_form.latitude.id_for_label }}"
+               class="block text-xs font-medium text-gray-700">{{ location_form.latitude.label }}</label>
+        {{ location_form.latitude }}
+        {{ location_form.latitude.errors }}
+      </div>
+      <div>
+        <label for="{{ location_form.longitude.id_for_label }}"
+               class="block text-xs font-medium text-gray-700">{{ location_form.longitude.label }}</label>
+        {{ location_form.longitude }}
+        {{ location_form.longitude.errors }}
+      </div>
+      <div>
+        <label for="{{ location_form.accuracy.id_for_label }}"
+               class="block text-xs font-medium text-gray-700">{{ location_form.accuracy.label }}
+          (m)</label>
+        {{ location_form.accuracy }}
+        {{ location_form.accuracy.errors }}
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="{{ location_form.notes.id_for_label }}"
+           class="block text-xs font-medium text-gray-700">{{ location_form.notes.label }}</label>
+    <div id="location-notes-readonly"
+         class="mt-1 rounded-md bg-gray-50 border border-gray-200 p-2 text-sm text-gray-700 whitespace-pre-wrap"
+         hidden></div>
+    {{ location_form.notes }}
+    <p id="location-notes-hint" class="mt-1 text-xs text-gray-500">Optional -- saved on the new location above.</p>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+{% comment %}
+  An observation laid out for pasting into an email to a project
+  coordinator. Takes `sighting` (core.utils.formatting.Sighting).
+
+  Styled inline rather than with Tailwind classes: copied as HTML, the
+  classes mean nothing in a mail client but inline styles come along.
+  A plain two-column table so a plain-text copy (innerText) still reads
+  as "Label<tab>value" lines.
+{% endcomment %}
+<table style="border-collapse: collapse; font-size: 14px;">
+  <tbody>
+  <tr>
+    <th scope="row" style="text-align: left; vertical-align: top; padding: 2px 16px 2px 0; font-weight: normal; color: #6b7280;">Species</th>
+    <td style="padding: 2px 0;">{{ sighting.species }} (<i>{{ sighting.scientific_name }}</i>)</td>
+  </tr>
+  <tr>
+    <th scope="row" style="text-align: left; vertical-align: top; padding: 2px 16px 2px 0; font-weight: normal; color: #6b7280;">Colour marks</th>
+    <td style="padding: 2px 0; font-family: monospace;">{{ sighting.marks|default:"—" }}</td>
+  </tr>
+  <tr>
+    <th scope="row" style="text-align: left; vertical-align: top; padding: 2px 16px 2px 0; font-weight: normal; color: #6b7280;">Date</th>
+    <td style="padding: 2px 0;">{{ sighting.date|date:"d-M-Y" }}{% if sighting.time %} {{ sighting.time|time:"H:i" }}{% endif %}</td>
+  </tr>
+  <tr>
+    <th scope="row" style="text-align: left; vertical-align: top; padding: 2px 16px 2px 0; font-weight: normal; color: #6b7280;">Place</th>
+    <td style="padding: 2px 0;">{{ sighting.place }}</td>
+  </tr>
+  <tr>
+    <th scope="row" style="text-align: left; vertical-align: top; padding: 2px 16px 2px 0; font-weight: normal; color: #6b7280;">Coordinates</th>
+    <td style="padding: 2px 0;">{{ sighting.coordinates|default:"—" }}</td>
+  </tr>
+  <tr>
+    <th scope="row" style="text-align: left; vertical-align: top; padding: 2px 16px 2px 0; font-weight: normal; color: #6b7280;">Age</th>
+    <td style="padding: 2px 0;">{{ sighting.age|default:"Unknown" }}</td>
+  </tr>
+  <tr>
+    <th scope="row" style="text-align: left; vertical-align: top; padding: 2px 16px 2px 0; font-weight: normal; color: #6b7280;">Sex</th>
+    <td style="padding: 2px 0;">{{ sighting.sex|default:"Unknown" }}</td>
+  </tr>
+  <tr>
+    <th scope="row" style="text-align: left; vertical-align: top; padding: 2px 16px 2px 0; font-weight: normal; color: #6b7280;">Observers</th>
+    <td style="padding: 2px 0;">{{ sighting.observers|default:"—" }}</td>
+  </tr>
+  </tbody>
+</table>

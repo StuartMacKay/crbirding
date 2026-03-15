@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Life history{% endblock %}
+
+{% block content %}
+  <div class="max-w-4xl mx-auto px-4 py-8">
+    <p>
+      <a href="{% url 'core:home' %}" class="text-sm text-accent-700 hover:underline">&larr;
+        Back to home</a>
+    </p>
+
+    <h1 class="mt-4 text-2xl font-bold text-gray-900">
+      {{ origin.get_species_display }}
+      <span
+        class="font-mono text-gray-500 font-normal text-lg">{{ origin.label }}</span>
+    </h1>
+
+    <div class="mt-4 bg-white border border-gray-200 rounded-lg p-4">
+      <h2 class="text-sm font-semibold text-gray-900">Ringing details</h2>
+      <p class="mt-1 text-sm text-gray-700">
+        Ringed {% if origin.date %}on {{ origin.date|date:"d M Y" }}{% endif %}
+        at {{ origin.location.get_name }}, {{ origin.location.get_country_display }}.
+      </p>
+      <p class="mt-1 text-xs text-gray-500">
+        {{ origin.get_age_display }} &middot; {{ origin.get_sex_display }}
+      </p>
+
+      <p class="mt-3 text-sm text-gray-700">
+        <span class="font-medium">{{ origin.project.name }}</span>
+        &mdash; coordinator: {{ origin.project.coordinator }}
+      </p>
+      <div class="mt-2 flex flex-wrap gap-3">
+        {% if origin.project.contact %}
+          <a href="mailto:{{ origin.project.contact }}"
+             class="text-sm text-accent-700 hover:text-accent-800 font-medium">
+            Email {{ origin.project.contact }}
+          </a>
+        {% endif %}
+        {% if origin.project.submit %}
+          <a href="{{ origin.project.submit }}" target="_blank" rel="noopener"
+             class="text-sm text-accent-700 hover:text-accent-800 font-medium">
+            Open submission page
+          </a>
+        {% endif %}
+        {% if not origin.project.contact and not origin.project.submit %}
+          <span class="text-xs text-gray-500">No contact details recorded for this
+            project.</span>
+        {% endif %}
+      </div>
+    </div>
+
+    <h2 class="mt-8 text-lg font-semibold text-gray-900">Observations ({{ rows|length }})</h2>
+
+    {% if rows %}
+      <div
+        class="mt-4 bg-white border border-gray-200 rounded-lg overflow-hidden overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-200 text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-2 text-left font-medium text-gray-500">Date</th>
+              <th class="px-4 py-2 text-left font-medium text-gray-500">Seen at</th>
+              <th class="px-4 py-2 text-left font-medium text-gray-500">Colour marks</th>
+              <th class="px-4 py-2 text-left font-medium text-gray-500">Observer</th>
+              <th class="px-4 py-2 text-left font-medium text-gray-500">Distance</th>
+              <th class="px-4 py-2 text-left font-medium text-gray-500"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {% for row in rows %}
+              <tr>
+                <td
+                  class="px-4 py-3 whitespace-nowrap text-gray-700">{{ row.journey.date|date:"d M Y" }}</td>
+                <td
+                  class="px-4 py-3 whitespace-nowrap text-gray-700">{{ row.journey.observed_place }}, {{ row.journey.observed_country }}</td>
+                <td
+                  class="px-4 py-3 whitespace-nowrap font-mono text-gray-700">{{ row.colour_marks|default:"—" }}</td>
+                <td
+                  class="px-4 py-3 whitespace-nowrap text-gray-700">{{ row.observer_names|default:"—" }}</td>
+                <td class="px-4 py-3 whitespace-nowrap text-gray-700">
+                  {% if row.journey.distance_km %}
+                    {{ row.journey.distance_km|floatformat:0 }} km
+                  {% else %}
+                    &mdash;
+                  {% endif %}
+                </td>
+                <td class="px-4 py-3 whitespace-nowrap">
+                  {% if row.is_mine %}
+                    <a href="{% url 'core:observation-edit' row.observation.pk %}"
+                       class="text-accent-700 hover:underline">Edit</a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <p class="mt-4 text-sm text-gray-500">No observations recorded for this bird yet.</p>
+    {% endif %}
+  </div>
+{% endblock %}

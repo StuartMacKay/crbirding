@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+  <p><a href="../">{% translate "Back to list" %}</a></p>
+
+  {% blocktranslate %}
+    <h2>CSV format</h2>
+    <p>One row per project.</p>
+    <ul>
+      <li>name (required)</li>
+      <li>coordinator (required)</li>
+      <li>country (required; either the EURING code or the display label)</li>
+      <li>contact (optional; the email address observations should be sent to)</li>
+      <li>submit (optional; the website where observations should be submitted)</li>
+      <li>site (optional; the website describing the project)</li>
+      <li>description (optional)</li>
+    </ul>
+
+    <p>There's only ever one project per country -- a row naming a country that
+      already has one is skipped rather than creating a duplicate.</p>
+  {% endblocktranslate %}
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="{% translate 'Import' %}">
+  </form>
+{% endblock %}
