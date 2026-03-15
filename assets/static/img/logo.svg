@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#166534" stroke="#14532d" stroke-width="2"/>
+
+  <!-- Bird silhouette (flying bird, side view) -->
+  <!-- Body -->
+  <ellipse cx="52" cy="42" rx="14" ry="7" fill="white" transform="rotate(-15 52 42)"/>
+  <!-- Head -->
+  <circle cx="63" cy="36" r="6" fill="white"/>
+  <!-- Beak -->
+  <path d="M68 34 L76 33 L68 37 Z" fill="#fbbf24"/>
+  <!-- Eye -->
+  <circle cx="65" cy="35" r="1.5" fill="#166534"/>
+  <!-- Tail -->
+  <path d="M38 46 L28 52 L38 50 Z" fill="white"/>
+  <!-- Wing (upper) -->
+  <path d="M45 36 Q50 28 62 30 Q55 34 52 38 Z" fill="#d1fae5"/>
+  <!-- Wing (lower) -->
+  <path d="M44 44 Q48 52 60 50 Q54 46 51 44 Z" fill="#d1fae5"/>
+
+  <!-- Colour rings on leg -->
+  <line x1="50" y1="48" x2="50" y2="56" stroke="white" stroke-width="1.5"/>
+  <rect x="47" y="48" width="6" height="2.5" rx="1" fill="#ef4444"/>
+  <rect x="47" y="51.5" width="6" height="2.5" rx="1" fill="#3b82f6"/>
+
+  <!-- Text: CRBirding -->
+  <text
+    x="50"
+    y="80"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="13"
+    font-weight="700"
+    letter-spacing="0.5"
+    fill="white"
+  >CRBirding</text>
+</svg>

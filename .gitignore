@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+
+.*
+!.dockerignore
+!.editorconfig
+!.env.example
+!.gitignore
+!.pre-commit-config.yaml

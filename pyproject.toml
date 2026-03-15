@@ -1,0 +1,76 @@
+[project]
+name = "crbirding"
+version = "0.1.0"
+description = "A Django website for managing observations of colour-ringed birds"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "django>=6.0",
+    "psycopg[binary]>=3.2",
+    "celery>=5.4",
+    "django-celery-beat>=2.7",
+    "redis>=5.2",
+    "whitenoise[brotli]>=6.8",
+    "gunicorn>=23.0",
+    "django-storages[s3]>=1.14",
+    "boto3>=1.35",
+    "django-htmx>=1.21",
+    "django-browser-reload>=1.16",
+    "django-health-check>=3.18",
+    "sentry-sdk[django]>=2.19",
+    "django-environ>=0.11",
+]
+
+[project.optional-dependencies]
+dev = [
+    "django-extensions>=3.2",
+    "ipython>=8.30",
+    "django-debug-toolbar>=4.4",
+    "pytest-django>=4.9",
+    "factory-boy>=3.3",
+    "pytest-cov>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "django-extensions>=3.2",
+    "ipython>=8.30",
+    "django-debug-toolbar>=4.4",
+    "pytest-django>=4.9",
+    "factory-boy>=3.3",
+    "pytest-cov>=6.0",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["tests.py", "test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--cov=apps",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "-v",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["apps"]
+omit = [
+    "*/migrations/*",
+    "*/tests*",
+    "conftest.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]

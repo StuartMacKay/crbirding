@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}500 Server Error{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+  <div class="mb-8">
+    <span class="text-8xl font-bold text-red-200">500</span>
+  </div>
+  <h1 class="text-3xl font-bold text-gray-900 mb-4">Server Error</h1>
+  <p class="text-lg text-gray-600 mb-8">
+    Something went wrong on our end. We've been notified and are looking into it.
+    Please try again in a few moments.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="{% url 'core:home' %}" class="inline-flex items-center justify-center px-6 py-3 bg-brand-700 hover:bg-brand-600 text-white font-medium rounded-lg transition-colors">
+      Back to Home
+    </a>
+    <button onclick="location.reload()" class="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-50 text-brand-700 font-medium rounded-lg border border-brand-300 transition-colors">
+      Try Again
+    </button>
+  </div>
+</div>
+{% endblock %}

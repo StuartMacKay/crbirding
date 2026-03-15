@@ -1,0 +1,34 @@
+# Data directories (contain db/redis/minio data with root-owned files)
+.data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+*.egg-info/
+dist/
+build/
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env

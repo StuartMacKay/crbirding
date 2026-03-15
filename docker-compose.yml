@@ -1,0 +1,168 @@
+---
+# =============================================================================
+# CRBirding Docker Compose
+# =============================================================================
+# Services:
+#   web         - Django/Gunicorn application
+#   db          - PostgreSQL 17
+#   redis       - Redis 7 (cache + Celery broker)
+#   minio       - MinIO (S3-compatible object storage)
+#   worker      - Celery worker
+#   beat        - Celery beat scheduler
+# =============================================================================
+
+x-app-env: &app-env
+  DJANGO_ENV: ${DJANGO_ENV:-development}
+  SECRET_KEY: ${SECRET_KEY:-django-insecure-dev-key-change-in-production}
+  ALLOWED_HOSTS: ${ALLOWED_HOSTS:-localhost,127.0.0.1,0.0.0.0}
+  CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-http://localhost:8000}
+  # Database
+  DB_HOST: db
+  DB_PORT: "5432"
+  DB_NAME: ${DB_NAME:-crbirding}
+  DB_USER: ${DB_USER:-crbirding}
+  DB_PASSWORD: ${DB_PASSWORD:-crbirding}
+  # Redis
+  REDIS_URL: redis://redis:6379/0
+  CELERY_BROKER_URL: redis://redis:6379/1
+  CELERY_RESULT_BACKEND: redis://redis:6379/2
+  # S3 / MinIO
+  USE_S3: ${USE_S3:-False}
+  AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-minioadmin}
+  AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-minioadmin}
+  AWS_STORAGE_BUCKET_NAME: ${AWS_STORAGE_BUCKET_NAME:-crbirding}
+  AWS_S3_ENDPOINT_URL: http://minio:9000
+  # Sentry
+  SENTRY_DSN: ${SENTRY_DSN:-}
+  SENTRY_ENVIRONMENT: ${DJANGO_ENV:-development}
+  # Site
+  SITE_ID: "1"
+
+x-app-base: &app-base
+  build:
+    context: .
+    dockerfile: Dockerfile
+    args:
+      UID: ${UID:-1000}
+      GID: ${GID:-1000}
+      DEV: ${DEV:-1}
+  env_file:
+    - .env
+  environment:
+    <<: *app-env
+  volumes:
+    - .:/app
+    - static_files:/app/staticfiles
+    - media_files:/app/media
+  depends_on:
+    db:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+  restart: unless-stopped
+
+services:
+  # ---------------------------------------------------------------------------
+  # Web application (Django + Gunicorn)
+  # ---------------------------------------------------------------------------
+  web:
+    <<: *app-base
+    command: gunicorn
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  # ---------------------------------------------------------------------------
+  # PostgreSQL database
+  # ---------------------------------------------------------------------------
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${DB_NAME:-crbirding}
+      POSTGRES_USER: ${DB_USER:-crbirding}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-crbirding}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./.data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-crbirding} -d ${DB_NAME:-crbirding}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # Redis (cache + Celery broker)
+  # ---------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - ./.data/redis:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # MinIO (S3-compatible object storage)
+  # ---------------------------------------------------------------------------
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${AWS_ACCESS_KEY_ID:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${AWS_SECRET_ACCESS_KEY:-minioadmin}
+    volumes:
+      - ./.data/minio:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"  # MinIO web console
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # Celery worker
+  # ---------------------------------------------------------------------------
+  worker:
+    <<: *app-base
+    command: celery-worker
+    ports: []
+    healthcheck:
+      test: ["CMD", "celery", "-A", "config", "inspect", "ping", "-d", "worker@$${HOSTNAME}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  # ---------------------------------------------------------------------------
+  # Celery beat (scheduled tasks)
+  # ---------------------------------------------------------------------------
+  beat:
+    <<: *app-base
+    command: celery-beat
+    ports: []
+    # Only one beat instance should run at a time
+    restart: unless-stopped
+
+volumes:
+  static_files:
+  media_files:

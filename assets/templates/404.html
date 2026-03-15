@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}404 Not Found{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+  <div class="mb-8">
+    <!-- Bird flying away SVG illustration -->
+    <div class="flex justify-center mb-4">
+      <svg class="h-24 w-24 text-brand-300" fill="none" viewBox="0 0 100 100" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10 60 Q30 40 50 50 Q70 60 90 35" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M50 50 Q45 45 40 48" />
+        <circle cx="52" cy="49" r="3" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <span class="text-8xl font-bold text-brand-200">404</span>
+  </div>
+  <h1 class="text-3xl font-bold text-gray-900 mb-4">Page Not Found</h1>
+  <p class="text-lg text-gray-600 mb-8">
+    The page you're looking for seems to have flown the nest. It may have been moved,
+    deleted, or perhaps it never existed.
+  </p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="{% url 'core:home' %}" class="inline-flex items-center justify-center px-6 py-3 bg-brand-700 hover:bg-brand-600 text-white font-medium rounded-lg transition-colors">
+      Back to Home
+    </a>
+    <button onclick="history.back()" class="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-50 text-brand-700 font-medium rounded-lg border border-brand-300 transition-colors">
+      Go Back
+    </button>
+  </div>
+</div>
+{% endblock %}
