@@ -51,6 +51,9 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    # Authentication
+    "allauth",
+    "allauth.account",
     # HTMX
     "django_htmx",
     # Health checks (v4.x — checks are configured via HealthCheckView in urls.py)
@@ -60,6 +63,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
+    "apps.users",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -83,6 +87,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
 ]
 
@@ -147,6 +152,11 @@ CACHES = {
 }
 
 # ---------------------------------------------------------------------------
+# Custom user model
+# ---------------------------------------------------------------------------
+AUTH_USER_MODEL = "users.User"
+
+# ---------------------------------------------------------------------------
 # Authentication
 # ---------------------------------------------------------------------------
 AUTH_PASSWORD_VALIDATORS = [
@@ -158,6 +168,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
 # ---------------------------------------------------------------------------

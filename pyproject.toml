@@ -18,6 +18,7 @@ dependencies = [
     "django-browser-reload>=1.16",
     "django-health-check>=3.18",
     "sentry-sdk[django]>=2.19",
+    "django-allauth>=65.3",
     "django-environ>=0.11",
 ]
 
