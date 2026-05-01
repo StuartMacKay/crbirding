@@ -30,6 +30,8 @@ handler500 = "apps.core.views.handler500"
 urlpatterns = [
     # Admin
     path("admin/", admin.site.urls),
+    # Core app (home page, error pages)
+    path("", include("apps.core.urls")),
     # Health checks (django-health-check v4.x class-based view)
     path("health/", health_check_view, name="health-check"),
 ]
