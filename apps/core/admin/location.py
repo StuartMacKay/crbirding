@@ -22,6 +22,6 @@ class LocationAdminForm(forms.ModelForm):
 @admin.register(Location)
 class LocationAdmin(admin.ModelAdmin):
     form = LocationAdminForm
-    list_display = ("get_name", "label", "place", "latitude", "longitude", "accuracy")
+    list_display = ("id", "get_name", "label", "place", "latitude", "longitude", "accuracy")
     list_filter = ("place__country", "captures__project__country")
     search_fields = ("name__Latn", "name__Cyrl", "name__Grek")

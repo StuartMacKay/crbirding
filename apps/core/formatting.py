@@ -17,7 +17,7 @@ import math
 from dataclasses import dataclass
 from itertools import groupby
 
-from .models import Age, Sex, TagType
+from .models import Age, Colour, Direction, Position, Sex, TagType
 
 EARTH_RADIUS_KM = 6371.0
 _COMPASS_POINTS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
@@ -109,6 +109,119 @@ def format_tags(tags) -> str | None:
     return "; ".join(
         f"{position}:" + ",".join(format_tag(tag) for tag in group) for position, group in groups
     )
+
+
+_DIRECTION_LETTERS = {"u": Direction.UP, "d": Direction.DOWN, "h": Direction.HORIZONTAL}
+
+
+def parse_tag_code(code: str) -> dict:
+    """Reverse of format_tag(): one tag's compact notation, e.g.
+    "BW(A123)d" or "PC" or "RF", into field values for constructing a
+    Tag (minus `position`/`order`, which only make sense in context of
+    the full tags string -- see parse_tags).
+
+    "F" (flag) is unambiguous wherever it appears in the colour prefix,
+    since it's never a real Colour code. Where an inscription's colour
+    prefix has two letters, the *second* is taken as the inscription's
+    own colour (matching the established convention, e.g. "BW(A123)" is
+    a blue ring with a *white* inscription) rather than a second ring
+    colour -- a striped ring with an explicitly colourless inscription
+    is rare enough that this is the right default to bias towards.
+
+    Raises ValueError, with the original code quoted in the message, on
+    anything it can't confidently parse.
+    """
+    original = code
+    uncertain = code.endswith("?")
+    if uncertain:
+        code = code[:-1]
+    if not code:
+        raise ValueError(f"{original!r}: empty tag code")
+
+    inscription = inscription_colour = inscription_direction = ""
+    head = code
+
+    if "(" in code:
+        head, _, rest = code.partition("(")
+        if ")" not in rest:
+            raise ValueError(f"{original!r}: missing closing bracket")
+        inscription, _, suffix = rest.partition(")")
+        if not inscription:
+            raise ValueError(f"{original!r}: empty inscription")
+        if suffix:
+            direction = _DIRECTION_LETTERS.get(suffix.lower())
+            if direction is None or len(suffix) != 1:
+                raise ValueError(f"{original!r}: unrecognised direction {suffix!r}")
+            inscription_direction = direction
+
+    kind = TagType.RING
+    if "F" in head:
+        kind = TagType.FLAG
+        head = head.replace("F", "", 1)
+
+    if not head:
+        raise ValueError(f"{original!r}: missing colour")
+
+    valid_colours = set(Colour.values)
+    for letter in head:
+        if letter not in valid_colours:
+            raise ValueError(f"{original!r}: {letter!r} is not a known colour code")
+
+    max_letters = 3 if inscription else 2
+    if len(head) > max_letters:
+        raise ValueError(f"{original!r}: too many colour letters before the inscription")
+
+    colour, second_colour = head[0], ""
+    if inscription:
+        if len(head) == 2:
+            inscription_colour = head[1]
+        elif len(head) == 3:
+            second_colour, inscription_colour = head[1], head[2]
+    elif len(head) == 2:
+        second_colour = head[1]
+
+    return {
+        "kind": kind,
+        "colour": colour,
+        "second_colour": second_colour,
+        "inscription": inscription,
+        "inscription_colour": inscription_colour,
+        "inscription_direction": inscription_direction,
+        "uncertain": uncertain,
+    }
+
+
+def parse_tags(text: str) -> list[dict]:
+    """Reverse of format_tags(): a full tags field, e.g.
+    "LB:WB(A123)u;RB:O,Y", into a list of dicts ready to construct Tag
+    instances from (each still needs its owning `capture`/`resighting`
+    set). Raises ValueError on anything it can't confidently parse.
+    """
+    text = text.strip()
+    if not text:
+        return []
+
+    valid_positions = set(Position.values)
+    specs = []
+    for group in text.split(";"):
+        group = group.strip()
+        if not group:
+            continue
+        if ":" not in group:
+            raise ValueError(f"{group!r}: expected POSITION:code[,code...]")
+        position, _, codes = group.partition(":")
+        position = position.strip()
+        if position not in valid_positions:
+            raise ValueError(f"{position!r} is not a known position")
+        for order, code in enumerate(codes.split(",")):
+            code = code.strip()
+            if not code:
+                raise ValueError(f"{group!r}: empty tag code")
+            spec = parse_tag_code(code)
+            spec["position"] = position
+            spec["order"] = order
+            specs.append(spec)
+    return specs
 
 
 def describe_place(location, latitude=None, longitude=None) -> tuple[str, str | None]:

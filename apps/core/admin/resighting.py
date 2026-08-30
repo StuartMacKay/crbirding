@@ -3,11 +3,12 @@ from django.utils.translation import gettext_lazy as _
 
 from apps.core.models import Resighting
 
+from .resighting_import import ResightingImportMixin
 from .tag import BaseTagInline
 
 
 @admin.register(Resighting)
-class ResightingAdmin(admin.ModelAdmin):
+class ResightingAdmin(ResightingImportMixin, admin.ModelAdmin):
     list_display = (
         "species",
         "location",

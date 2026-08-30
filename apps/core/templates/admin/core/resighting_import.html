@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+  <p><a href="../">{% translate "Back to list" %}</a></p>
+
+  <h2>{% translate "CSV format" %}</h2>
+  <p>One row per resighting. Required columns: <code>species</code> (EURING code),
+    <code>location</code> (its numeric id), <code>date</code> (YYYY-MM-DD), and <code>tags</code>.
+    Optional columns: <code>time</code>, <code>latitude</code>, <code>longitude</code>,
+    <code>accuracy</code>, <code>notes</code> -- coordinates given here override the
+    location's own, for this sighting only.</p>
+  <p><code>tags</code> uses the same notation shown elsewhere in the app: positions
+    separated by <code>;</code>, tags stacked at one position separated by <code>,</code>,
+    e.g. <code>LB:WB(A123)u;RB:O,Y</code> -- a white-on-blue ring reading upward on the
+    left leg (tibia), and an orange ring above a yellow ring on the right leg (tarsus).
+    Direction, if given, is a single letter (<code>u</code>/<code>d</code>/<code>h</code>)
+    right after the closing bracket.</p>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="{% translate 'Import' %}">
+  </form>
+{% endblock %}
