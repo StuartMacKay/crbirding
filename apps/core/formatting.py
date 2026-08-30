@@ -18,7 +18,6 @@ from dataclasses import dataclass
 from itertools import groupby
 
 from .models import Age, Sex, TagType
-from .models.direction import ENCODING as DIRECTION_ARROWS
 
 EARTH_RADIUS_KM = 6371.0
 _COMPASS_POINTS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
@@ -72,7 +71,12 @@ def effective_coordinates(record):
 
 
 def format_tag(tag) -> str:
-    """One physical tag's own notation, e.g. "BW(A123)" or "PC" or "Y".
+    """One physical tag's own notation, e.g. "BW(A123)d" or "PC" or "Y".
+
+    The direction, if any, is the lowercase of its stored code (d/h/u),
+    right after the inscription's closing bracket -- unambiguous, since
+    a colour code only ever appears before the opening bracket. See
+    apps.core.models.Direction for why this replaced arrow symbols.
 
     Doesn't include its Position -- that's added by format_tags when
     assembling the full stack, since a single tag's position only
@@ -83,8 +87,9 @@ def format_tag(tag) -> str:
         code += "F"
 
     if tag.inscription:
-        arrow = DIRECTION_ARROWS.get(tag.inscription_direction, "")
-        code += f"{tag.inscription_colour}({tag.inscription}{arrow})"
+        code += f"{tag.inscription_colour}({tag.inscription})"
+        if tag.inscription_direction:
+            code += tag.inscription_direction.lower()
 
     if tag.uncertain:
         code += "?"
@@ -95,7 +100,7 @@ def format_tag(tag) -> str:
 def format_tags(tags) -> str | None:
     """The full colour-mark notation for a Resighting: tags sharing a
     Position are joined top-to-bottom with ",", and different Positions
-    are joined with ";" -- e.g. "LA:O,Y; RB:BW(A123)".
+    are joined with ";" -- e.g. "LA:O,Y; RB:BW(A123)d".
     """
     tags = sorted(tags, key=lambda tag: (tag.position, tag.order))
     if not tags:
