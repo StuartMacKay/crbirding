@@ -1,0 +1,1512 @@
+place_code,country_code,active,latin_name
++A00,XAO,true,Arctic Ocean
++AJM,SJM,true,Svalbard and Jan Mayen
++ASV,SJM,true,Svalbard and Jan Mayen
++B00,XNS,true,North Sea islands
++C00,XEI,true,English Channel/Irish Sea islands
++D00,XBB,true,Bay of Biscay islands
++E00,XBS,true,Baltic Sea islands
++F00,XMS,true,Mediterranean Sea islands
++G00,XBC,true,Black and Caspian Sea islands
++HCN,XCA,false,Canary Islands
+-B00,XAS,true,North Sea
+-C00,XAS,true,English Channel and Irish Sea
+-D00,XAS,true,Bay of Biscay
+-E00,XAS,true,Baltic Sea
+-F00,XAS,true,Mediterranean Sea
+-G00,XAS,true,Black and Caspian Seas
+-H00,XAS,true,North Atlantic Ocean (other parts)
+-I00,XAS,true,Other Oceans
+-J00,XAS,true,Indian Ocean
+AB00,ALB,true,Albania
+AM00,LIE,true,Liechtenstein
+AU--,AUT,true,Austria
+AU00,AUT,true,Burgenland
+AU01,AUT,true,K?rnten
+AU02,AUT,true,Nieder?sterreich
+AU03,AUT,true,Ober?sterreich
+AU04,AUT,true,Salzburg
+AU05,AUT,true,Steiermark
+AU06,AUT,true,Tirol
+AU07,AUT,true,Vorarlberg
+AU08,AUT,true,Wien
+BG--,BGR,true,Bulgaria
+BG01,BGR,true,Blagoevgrad
+BG02,BGR,true,Burgas
+BG03,BGR,true,Varna
+BG04,BGR,true,Veliko Turnovo
+BG05,BGR,true,Vidin
+BG06,BGR,true,Vratsa
+BG07,BGR,true,Gabrovo
+BG08,BGR,true,Dobrich
+BG09,BGR,true,Kurdzhali
+BG10,BGR,true,Kyustendil
+BG11,BGR,true,Lovech
+BG12,BGR,true,Montana
+BG13,BGR,true,Pazardzhik
+BG14,BGR,true,Pernik
+BG15,BGR,true,Pleven
+BG16,BGR,true,Plovdiv
+BG17,BGR,true,Razgrad
+BG18,BGR,true,Ruse
+BG19,BGR,true,Silistra
+BG20,BGR,true,Sliven
+BG21,BGR,true,Smolyan
+BG22,BGR,true,Sofia province
+BG23,BGR,true,Sofia City
+BG24,BGR,true,Stara Zagora
+BG25,BGR,true,Turgovishte
+BG26,BGR,true,Haskovo
+BG27,BGR,true,Shumen
+BG28,BGR,true,Yambol
+BG70,BGR,false,Blagoevgrad
+BG71,BGR,false,Khaskovo
+BG72,BGR,false,Kolarovgrad (Shumen)
+BG73,BGR,false,Pleven
+BG74,BGR,false,Plovdiv
+BG75,BGR,false,Ruse
+BG76,BGR,false,Sofiya
+BG77,BGR,false,Stara Zagora
+BG78,BGR,false,Turnovo
+BG79,BGR,false,Vratsa
+BG80,BGR,false,Burgas
+BG81,BGR,false,Stalin (Varna)
+BH00,BIH,true,Bosnia and Herzegovina
+BL--,BEL,true,Belgium
+BL19,BEL,true,Bruxelles
+BL20,BEL,true,Antwerpen
+BL21,BEL,true,Brabant
+BL22,BEL,true,Hainaut
+BL23,BEL,true,Limburg
+BL24,BEL,true,Li?ge
+BL25,BEL,true,Luxembourg
+BL26,BEL,true,Namur
+BL27,BEL,true,Oost-Vlaanderen
+BL28,BEL,true,West-Vlaanderen
+BL29,BEL,true,Brabant wallon
+BL30,BEL,true,Vlaams Brabant
+BY--,BLR,true,Belarus
+BY20,BLR,true,Brest O.
+BY22,BLR,true,Gomel O.
+BY23,BLR,true,Grodno O.
+BY25,BLR,true,Minsk O.
+BY26,BLR,true,Mogilev O.
+BY28,BLR,true,Vitebsk O.
+CI00,XCH,true,Channel Islands
+CIAL,XCH,true,Alderney
+CIGU,XCH,true,Guernsey
+CIHE,XCH,true,Herm
+CIJE,XCH,true,Jersey
+CISA,XCH,true,Sark
+CS--,CZE,false,Czech Republic
+CS1-,CZE,false,Bohemia
+CS10,CZE,false,Cesk? Budejovice
+CS11,CZE,false,Hradec Kralove
+CS12,CZE,false,Jihlava
+CS13,CZE,false,Karlovy Vary
+CS14,CZE,false,Liberec
+CS15,CZE,false,Pardubice
+CS16,CZE,false,Plzen (Pilsen)
+CS17,CZE,false,Praha
+CS18,CZE,false,Usti nad Labem
+CS2-,CZE,false,Moravia
+CS22,CZE,false,Brno (Br?nn)
+CS23,CZE,false,Gottwaldov
+CS26,CZE,false,Olomouc
+CS27,CZE,false,Ostrava
+CY00,CYP,true,Cyprus
+CYB-,CYP,true,UN Buffer Zone
+CYN-,CYP,true,Northern Regions
+CYS-,CYP,true,Southern Regions
+CZ--,CZE,true,Czechia
+CZ1-,CZE,false,Bohemia
+CZ10,CZE,true,Jiho?esk?
+CZ11,CZE,true,Kr?lov?hradeck?
+CZ12,CZE,true,Vyso?ina
+CZ13,CZE,true,Karlovarsk?
+CZ14,CZE,true,Libereck?
+CZ15,CZE,true,Pardubick?
+CZ16,CZE,true,Plze?sk?
+CZ17,CZE,true,Stredo?esk? a Praha
+CZ18,CZE,true,?steck?
+CZ2-,CZE,false,Moravia
+CZ22,CZE,true,Jihomoravsk?
+CZ23,CZE,true,Zl?nsk?
+CZ26,CZE,true,Olomouck?
+CZ27,CZE,true,Moravskoslezsk?
+CZAA,CZE,false,Praha
+CZBE,CZE,false,Beroun
+CZBK,CZE,false,Blansko
+CZBM,CZE,false,Brno-mesto
+CZBN,CZE,false,Benesova
+CZBO,CZE,false,Brno-venko
+CZBR,CZE,false,Bruntal
+CZBV,CZE,false,Breclav
+CZCB,CZE,false,Ceske Budejovice
+CZCH,CZE,false,Cheb
+CZCK,CZE,false,CeskyKrumlov
+CZCL,CZE,false,CeskaLipa
+CZCR,CZE,false,Chrudim
+CZCV,CZE,false,Chomutov
+CZDC,CZE,false,Decin
+CZDO,CZE,false,Domazlice
+CZFM,CZE,false,Frydek Mistek
+CZHB,CZE,false,Havlickuv Brod
+CZHK,CZE,false,Hradec Kralove
+CZHO,CZE,false,Hodonin
+CZJC,CZE,false,Jicin
+CZJE,CZE,false,Jesenik
+CZJH,CZE,false,Jindrichhuv Hradec
+CZJI,CZE,false,Jihlava
+CZJN,CZE,false,Jablonec nad Nisou
+CZKA,CZE,false,Karvina
+CZKH,CZE,false,Kutna Hora
+CZKL,CZE,false,Kladno
+CZKM,CZE,false,Kromeriz
+CZKO,CZE,false,Kolin
+CZKT,CZE,false,Klatovy
+CZKV,CZE,false,Karlovy Vary
+CZLI,CZE,false,Liberec
+CZLN,CZE,false,Louny
+CZLT,CZE,false,Litomerice
+CZMB,CZE,false,Mlada Boleslav
+CZME,CZE,false,Melnik
+CZMO,CZE,false,Most
+CZNA,CZE,false,Nachod
+CZNB,CZE,false,Nymburk
+CZNJ,CZE,false,Novy Jicin
+CZOL,CZE,false,Olomouc
+CZOP,CZE,false,Opava
+CZOS,CZE,false,Ostrava
+CZPA,CZE,false,Pardubice
+CZPB,CZE,false,Pribram
+CZPE,CZE,false,Pelhromov
+CZPH,CZE,false,Praha-vychod
+CZPI,CZE,false,Pisek
+CZPJ,CZE,false,Plzen-jih
+CZPM,CZE,false,Plzen-mesto
+CZPR,CZE,false,Prerov
+CZPS,CZE,false,Plzen-sever
+CZPT,CZE,false,Prachatice
+CZPV,CZE,false,Prostejov
+CZPZ,CZE,false,Praha-zapad
+CZRA,CZE,false,Rakovnik
+CZRK,CZE,false,Rychnov nad Kneznou
+CZRO,CZE,false,Rokycany
+CZSM,CZE,false,Semily
+CZSO,CZE,false,Sokolov
+CZST,CZE,false,Strakonice
+CZSU,CZE,false,Sumperk
+CZSY,CZE,false,Svitavy
+CZTA,CZE,false,Tabor
+CZTC,CZE,false,Tachov
+CZTP,CZE,false,Teplice
+CZTR,CZE,false,Trebic
+CZTU,CZE,false,Trutnov
+CZUH,CZE,false,Uherske Hradiste
+CZUL,CZE,false,Usti nad Labem
+CZUO,CZE,false,Usti nad Orlici
+CZVS,CZE,false,Vsetin
+CZVY,CZE,false,Vyskov
+CZZL,CZE,false,Zlin
+CZZN,CZE,false,Znojmo
+CZZR,CZE,false,Zdar nad Sazavou
+DD--,DEU,false,German Democratic Republic
+DD6+,DEU,false,Brandenburg
+DD6-,DEU,false,Mecklenburg
+DD60,DEU,false,Neubrandenburg
+DD61,DEU,false,Rostock
+DD62,DEU,false,Schwerin
+DD63,DEU,false,Berlin (East)
+DD64,DEU,false,Cottbus
+DD65,DEU,false,Frankfurt (Oder)
+DD66,DEU,false,Potsdam
+DD7+,DEU,false,Sachsen & Thuringen
+DD7-,DEU,false,Sachsen Anhalt
+DD70,DEU,false,Halle
+DD71,DEU,false,Magdeburg
+DD72,DEU,false,Karl-Marx-stadt (Cemnitz)
+DD73,DEU,false,Dresden
+DD74,DEU,false,Erfurt
+DD75,DEU,false,Gera
+DD76,DEU,false,Leipzig
+DD77,DEU,false,Suhl
+DE--,DEU,true,Germany
+DEA-,DEU,true,Bavaria
+DEAB,DEU,true,Oberbayern
+DEAF,DEU,true,Oberfranken
+DEAM,DEU,true,Mittelfranken
+DEAN,DEU,true,Niederbayern
+DEAP,DEU,true,Oberpfalz
+DEAS,DEU,true,Schwaben
+DEAU,DEU,true,Unterfranken
+DEB-,DEU,true,Baden-W?rttemberg
+DEBB,DEU,true,Brandenburg
+DEBE,DEU,true,Berlin
+DEBF,DEU,true,S?dbaden
+DEBK,DEU,true,Nordbaden
+DEBS,DEU,true,Nordw?rttemberg
+DEBT,DEU,true,S?dw?rttemberg
+DEC-,DEU,true,Rheinland-Pfalz
+DECK,DEU,true,Koblenz
+DECR,DEU,true,Rheinhessen-Pfalz
+DECT,DEU,true,Trier
+DEDO,DEU,true,Saarland
+DEE-,DEU,true,Hessen
+DEED,DEU,true,Darmstadt
+DEEG,DEU,true,Gie?en
+DEEK,DEU,true,Kassel
+DEF-,DEU,true,Nordrhein-Westfalen
+DEFA,DEU,true,Arnsberg
+DEFD,DEU,true,D?sseldorf
+DEFK,DEU,true,K?ln
+DEFL,DEU,true,Detmold
+DEFM,DEU,true,M?nster
+DEG-,DEU,true,Niedersachsen
+DEGB,DEU,true,Braunschweig
+DEGF,DEU,true,Ostfriesische Inseln
+DEGH,DEU,true,Hannover
+DEGL,DEU,true,L?neburg
+DEGN,DEU,true,Neuwerk and Scharh?rn Islands
+DEGW,DEU,true,Weser-Ems
+DEHH,DEU,true,Hamburg
+DEMV,DEU,true,Mecklenburg - Vorpommern
+DEQ-,DEU,true,Schleswig-Holstein
+DEQH,DEU,true,Helgoland
+DEQN,DEU,true,Nordfriesische Inseln
+DEQS,DEU,true,Schleswig-Holstein (mainland)
+DEQT,DEU,true,Island Trischen
+DERA,DEU,true,Sachsen Anhalt
+DERH,DEU,true,Halle
+DERM,DEU,true,Magdeburg
+DERS,DEU,true,Dessau
+DESC,DEU,true,Chemnitz
+DESD,DEU,true,Dresden
+DESL,DEU,true,Leipzig
+DESN,DEU,true,Sachsen
+DETH,DEU,true,Th?ringen
+DEXB,DEU,true,Bremen
+DF--,DEU,true,Germany
+DF63,DEU,false,Berlin
+DFA-,DEU,false,Bavaria
+DFAB,DEU,false,Oberbayern
+DFAF,DEU,false,Oberfranken
+DFAM,DEU,false,Mittelfranken
+DFAN,DEU,false,Niederbayern
+DFAP,DEU,false,Oberpfalz
+DFAS,DEU,false,Schwaben
+DFAU,DEU,false,Unterfranken
+DFB-,DEU,false,Baden-W?rttemberg
+DFBF,DEU,false,S?dbaden
+DFBK,DEU,false,Nordbaden
+DFBS,DEU,false,Nordw?rttemberg
+DFBT,DEU,false,S?dw?rttemberg
+DFC-,DEU,false,Rheinland-Pfalz
+DFCK,DEU,false,Koblenz
+DFCR,DEU,false,Rheinhessen-Pfalz
+DFCT,DEU,false,Trier
+DFDS,DEU,false,Saarland
+DFE-,DEU,false,Hessen
+DFED,DEU,false,Darmstadt
+DFEG,DEU,false,Gie?en
+DFEK,DEU,false,Kassel
+DFF-,DEU,false,Nordrhein-Westfalen
+DFFA,DEU,false,Arnsberg
+DFFD,DEU,false,D?sseldorf
+DFFK,DEU,false,K?ln
+DFFL,DEU,false,Detmold
+DFFM,DEU,false,M?nster
+DFG-,DEU,false,Niedersachsen
+DFGB,DEU,false,Braunschweig
+DFGF,DEU,false,Ostfriesische Inseln
+DFGH,DEU,false,Hannover
+DFGL,DEU,false,L?neburg
+DFGN,DEU,false,Islands Neuwerk and Scharh?rn
+DFGW,DEU,false,Weser-Ems
+DFHH,DEU,false,Hamburg
+DFQ-,DEU,false,Schleswig-Holstein
+DFQH,DEU,false,Helgoland
+DFQN,DEU,false,Nordfriesische Inseln
+DFQS,DEU,false,Schleswig-Holstein
+DFQT,DEU,false,Island Trischen
+DFXB,DEU,false,Bremen
+DK--,DNK,true,Denmark
+DK00,DNK,false,Anholt
+DK01,DNK,false,Fyn/Langeland
+DK02,DNK,false,Jylland
+DK03,DNK,false,Laes?/Aer?
+DK04,DNK,false,Falster/Lolland/Maribo
+DK05,DNK,false,Sams?
+DK06,DNK,false,M?n/Saltholm/Sjaelland
+DK07,DNK,false,Fan?/R?m?/North Frisian Islands
+DK10,DNK,false,Bornholm
+DK15,DNK,false,K?benhavn
+DK20,DNK,false,Frederiksborg
+DK25,DNK,false,Roskilde
+DK30,DNK,false,Vestsj?lland
+DK35,DNK,false,Storstr?m
+DK40,DNK,false,Bornholms
+DK42,DNK,false,Fyn
+DK50,DNK,false,S?nderjyllands
+DK55,DNK,false,Ribe
+DK60,DNK,false,Vejle
+DK65,DNK,false,Ringk?bing
+DK70,DNK,false,?rhus
+DK76,DNK,false,Viborg
+DK80,DNK,false,Nordjyllands
+DKHS,DNK,true,HovedStaden
+DKMJ,DNK,true,MidtJylland
+DKNJ,DNK,true,NordJylland
+DKSD,DNK,true,SydDanmark
+DKSL,DNK,true,Sj?lLand
+EK00,AND,true,Andorra
+EK23,AND,false,Andorra
+ER--,IRL,true,Ireland
+ERCK,IRL,true,Cork
+ERCL,IRL,true,Clare
+ERCV,IRL,true,Cavan
+ERCW,IRL,true,Carlow
+ERDO,IRL,true,Donegal
+ERDU,IRL,true,Dublin
+ERGA,IRL,true,Galway
+ERKD,IRL,true,Kildare
+ERKE,IRL,true,Kerry
+ERKK,IRL,true,Kilkenny
+ERLG,IRL,true,Longford
+ERLK,IRL,true,Limerick
+ERLM,IRL,true,Leitrim
+ERLU,IRL,true,Louth
+ERLX,IRL,true,Laois
+ERMA,IRL,true,Mayo
+ERME,IRL,true,Meath
+ERMO,IRL,true,Monaghan
+EROF,IRL,true,Offaly
+ERRO,IRL,true,Roscommon
+ERSL,IRL,true,Sligo
+ERTP,IRL,true,Tipperary
+ERWA,IRL,true,Waterford
+ERWI,IRL,true,Wicklow
+ERWM,IRL,true,Westmeath
+ERWX,IRL,true,Wexford
+ES--,ESP,true,Spain
+ES0-,ESP,true,Atlantic coast
+ES00,ESP,true,?lava
+ES01,ESP,true,La Coru?a
+ES02,ESP,true,Guip?zcoa
+ES03,ESP,true,Lugo
+ES04,ESP,true,Orense
+ES05,ESP,true,Asturias
+ES06,ESP,true,Pontevedra
+ES07,ESP,true,Cantabria
+ES08,ESP,true,Vizcaya
+ES1-,ESP,true,Centra; north-west
+ES10,ESP,true,Avila
+ES11,ESP,true,Burgos
+ES12,ESP,true,Le?n
+ES13,ESP,true,La Rioja (Logro?o)
+ES14,ESP,true,Palencia
+ES15,ESP,true,Salamanca
+ES16,ESP,true,Segovia
+ES17,ESP,true,Soria
+ES18,ESP,true,Valladolid
+ES19,ESP,true,Zamora
+ES2-,ESP,true,Central; north-east
+ES20,ESP,true,Cuenca
+ES21,ESP,true,Guadalajara
+ES22,ESP,true,Huesca
+ES23,ESP,true,L?rida
+ES24,ESP,true,Navarra
+ES25,ESP,true,Teruel
+ES26,ESP,true,Zaragoza
+ES3-,ESP,true,North-east coast
+ES30,ESP,true,Barcelona
+ES31,ESP,true,Castell?n
+ES32,ESP,true,Girona
+ES33,ESP,true,Tarragona
+ES4-,ESP,true,South-east coast
+ES40,ESP,true,Albacete
+ES41,ESP,true,Alicante
+ES42,ESP,true,Almeria
+ES43,ESP,true,Murcia
+ES44,ESP,true,Valencia
+ES5-,ESP,true,Central; south
+ES50,ESP,true,Badajoz
+ES51,ESP,true,C?ceres
+ES52,ESP,true,Ciudad Real
+ES53,ESP,true,Madrid
+ES54,ESP,true,Toledo
+ES6-,ESP,true,South
+ES60,ESP,true,C?diz
+ES61,ESP,true,C?rdoba
+ES62,ESP,true,Granada
+ES63,ESP,true,Huelva
+ES64,ESP,true,Ja?n
+ES65,ESP,true,M?laga
+ES66,ESP,true,Sevilla
+ES7-,ESP,true,Baleares
+ES70,ESP,true,Eivissa
+ES71,ESP,true,Mallorca
+ES72,ESP,true,Menorca
+ES8-,ESP,true,Islas Canarias
+ES80,ESP,true,Isla de Tenerife
+ES81,ESP,true,Isla de La Palma
+ES82,ESP,true,Isla de La Gomera
+ES83,ESP,true,Isla el Hierro
+ES84,ESP,true,Isla de Gran Canaria
+ES85,ESP,true,Isla de Fuerteventura
+ES86,ESP,true,Isla de Lanzarote
+ET00,EST,true,Estonia
+FA--,FRO,true,Faroe Islands
+FA01,FRO,true,Nordoyar
+FA02,FRO,true,Eysturoya
+FA03,FRO,true,Streymoy
+FA04,FRO,true,V?ga
+FA05,FRO,true,Sandoy
+FA06,FRO,true,Suduroy Nordari
+FA07,FRO,true,Suduroy Sunnari
+FR--,FRA,true,France
+FR0-,FRA,true,France; north-west
+FR01,FRA,true,Calvados
+FR02,FRA,true,Eure
+FR03,FRA,true,Manche
+FR04,FRA,true,Mayenne
+FR05,FRA,true,Nord
+FR06,FRA,true,Orne
+FR07,FRA,true,Pas-de-Calais
+FR08,FRA,true,Seine-Maritime
+FR09,FRA,true,Somme
+FR1-,FRA,true,France; north east
+FR10,FRA,true,Aisne
+FR11,FRA,true,Ardennes
+FR12,FRA,true,Bas-Rhin
+FR13,FRA,true,Haute-Marne
+FR14,FRA,true,Haut-Rhin & Territoire de Belfort
+FR15,FRA,true,Marne
+FR16,FRA,true,Meurthe-et-Moselle
+FR17,FRA,true,Meuse
+FR18,FRA,true,Moselle
+FR19,FRA,true,Vosges
+FR2-,FRA,true,France; central north
+FR20,FRA,true,Aube
+FR21,FRA,true,C?te-d'Or
+FR22,FRA,true,Eure-et-Loir
+FR23,FRA,true,Loir-et-Cher
+FR24,FRA,true,Loiret
+FR25,FRA,true,Oise
+FR26,FRA,true,Sarthe
+FR27,FRA,true,Seine-et-Marne
+FR28,FRA,true,Seine-et-Oise? & Seine
+FR29,FRA,true,Yonne
+FR3-,FRA,true,France; Atlantic coast
+FR30,FRA,true,Pyr?n?es-Atlantiques
+FR31,FRA,true,Charente-Maritime
+FR32,FRA,true,C?tes-d?Armor
+FR33,FRA,true,Finist?re
+FR34,FRA,true,Gironde
+FR35,FRA,true,Ille-et-Vilaine
+FR36,FRA,true,Landes
+FR37,FRA,true,Loire-Atlantique
+FR38,FRA,true,Morbihan
+FR39,FRA,true,Vend?e
+FR4-,FRA,true,France; central west
+FR40,FRA,true,Charente
+FR41,FRA,true,Corr?ze
+FR42,FRA,true,Creuse
+FR43,FRA,true,Deux-S?vres
+FR44,FRA,true,Dordogne
+FR45,FRA,true,Haute-Vienne
+FR46,FRA,true,Indre
+FR47,FRA,true,Indre-et-Loire
+FR48,FRA,true,Maine-et-Loire
+FR49,FRA,true,Vienne
+FR5-,FRA,true,France; central east
+FR50,FRA,true,Allier
+FR51,FRA,true,Ard?che
+FR52,FRA,true,Cantal
+FR53,FRA,true,Cher
+FR54,FRA,true,Haute-Loire
+FR55,FRA,true,Loire
+FR56,FRA,true,Ni?vre
+FR57,FRA,true,Puy-de-D?me
+FR58,FRA,true,Rh?ne
+FR59,FRA,true,Sa?ne-et-Loire
+FR6-,FRA,true,France; east
+FR60,FRA,true,Ain
+FR61,FRA,true,Alpes-de-Haute-Provence
+FR62,FRA,true,Doubs
+FR63,FRA,true,Dr?me
+FR64,FRA,true,Hautes-Alpes
+FR65,FRA,true,Haute-Sa?ne
+FR66,FRA,true,Haute-Savoie
+FR67,FRA,true,Is?re
+FR68,FRA,true,Jura
+FR69,FRA,true,Savoie
+FR7-,FRA,true,France; central south
+FR70,FRA,true,Ari?ge
+FR71,FRA,true,Aveyron
+FR72,FRA,true,Gers
+FR73,FRA,true,Haute-Garonne
+FR74,FRA,true,Hautes-Pyr?n?es
+FR75,FRA,true,Lot
+FR76,FRA,true,Lot-et-Garonne
+FR77,FRA,true,Loz?re
+FR78,FRA,true,Tarn
+FR79,FRA,true,Tarn-et-Garonne
+FR8-,FRA,true,France; Mediterranean
+FR80,FRA,true,Alpes-Maritimes
+FR81,FRA,true,Aude
+FR82,FRA,true,Bouches-du-Rh?ne
+FR83,FRA,true,Gard
+FR84,FRA,true,H?rault
+FR85,FRA,true,Pyr?n?es-Orientales
+FR86,FRA,true,Var
+FR87,FRA,true,Vaucluse
+FR90,FRA,true,Corse
+GB--,GBR,true,Great Britain
+GB00,GBR,false,"Antrim, Armagh, Down"
+GB01,GBR,false,"Londonderry, Tyrone"
+GB02,GBR,false,Monaghan
+GB10,GBR,false,Cornwall
+GB11,GBR,false,Devon
+GB12,GBR,false,Dorset
+GB13,GBR,false,Gloucester
+GB14,GBR,false,Hampshire
+GB15,GBR,false,Monmouth
+GB16,GBR,false,Scilly Isles
+GB17,GBR,false,Somerset
+GB18,GBR,false,Isle of Wight
+GB19,GBR,false,Wiltshire
+GB20,GBR,false,Bedfordshire
+GB21,GBR,false,Berkshire
+GB22,GBR,false,Buckingham
+GB23,GBR,false,Essex
+GB24,GBR,false,Hertfordshire
+GB25,GBR,false,Kent
+GB26,GBR,false,Middlesex & London
+GB27,GBR,false,Oxford
+GB28,GBR,false,Surrey
+GB29,GBR,false,Sussex
+GB30,GBR,false,Cambridge
+GB31,GBR,false,Huntingdon
+GB32,GBR,false,Lincolnshire
+GB33,GBR,false,Norfolk
+GB34,GBR,false,Northamptonshire
+GB35,GBR,false,Rutland
+GB36,GBR,false,Suffolk
+GB40,GBR,false,Derby
+GB41,GBR,false,Hereford
+GB42,GBR,false,Leicestershire
+GB43,GBR,false,Nottinghamshire
+GB44,GBR,false,Shropshire
+GB45,GBR,false,Staffordshire
+GB46,GBR,false,Warwickshire
+GB47,GBR,false,Worcestershire
+GB50,GBR,false,Cheshire
+GB51,GBR,false,Cumberland
+GB52,GBR,false,Durham
+GB53,GBR,false,Isle of Man
+GB54,GBR,false,"Lancashire, north"
+GB55,GBR,false,"Lancashire, south"
+GB56,GBR,false,Northumberland
+GB57,GBR,false,Westmorland
+GB58,GBR,false,Yorkshire
+GB59,GBR,false,Yorkshire
+GB60,GBR,false,Anglesey
+GB61,GBR,false,Brecon and Radnor
+GB62,GBR,false,Caernarvonshire
+GB63,GBR,false,Cardigan
+GB64,GBR,false,Carmarthen
+GB65,GBR,false,Denbigh & Flint
+GB66,GBR,false,Glamorgan
+GB67,GBR,false,Merioneth
+GB68,GBR,false,Montgomery
+GB69,GBR,false,Pembroke
+GB70,GBR,false,Ayrshire
+GB71,GBR,false,Berwickshire
+GB72,GBR,false,Dumfriesshire
+GB73,GBR,false,Kirkcudbrightshire
+GB74,GBR,false,Lanarkshire
+GB75,GBR,false,Lothians
+GB76,GBR,false,Peebles & Selkirk
+GB77,GBR,false,Renfrew
+GB78,GBR,false,Roxburgh
+GB79,GBR,false,Wigtownshire
+GB80,GBR,false,Aberdeenshire
+GB81,GBR,false,Angus
+GB82,GBR,false,Banffshire
+GB83,GBR,false,Clackmannan & Kinross
+GB84,GBR,false,Dunbartonshire
+GB85,GBR,false,Fife
+GB86,GBR,false,Kincardine
+GB87,GBR,false,Moray & Nairn
+GB88,GBR,false,Perth
+GB89,GBR,false,Stirling
+GB90,GBR,false,Argyll
+GB91,GBR,false,Bute
+GB92,GBR,false,Caithness
+GB93,GBR,false,Fair Isle
+GB94,GBR,false,Inverness
+GB95,GBR,false,Orkney
+GB96,GBR,false,Outer Hebrides
+GB97,GBR,false,Ross & Cromarty
+GB98,GBR,false,Shetland
+GB99,GBR,false,Sutherland
+GBAB,GBR,true,Aberdeen
+GBAG,GBR,true,Angus
+GBAN,GBR,true,Isle of Anglesey
+GBAR,GBR,true,Argyll and Bute
+GBAS,GBR,true,Aberdeenshire
+GBAV,GBR,false,Avon
+GBAY,GBR,true,South Ayrshire
+GBBA,GBR,true,Bath and N. E. Somerset
+GBBB,GBR,true,Blackburn with Darwen
+GBBC,GBR,false,Buckingham
+GBBD,GBR,false,Bedfordshire
+GBBE,GBR,true,Bedfordshire
+GBBF,GBR,true,Bracknell Forest
+GBBG,GBR,true,Bridgend
+GBBH,GBR,true,Bournemouth
+GBBK,GBR,false,Berkshire
+GBBN,GBR,true,Brighton & Hove
+GBBP,GBR,true,Blackpool
+GBBR,GBR,true,Scottish Borders
+GBBS,GBR,true,Bristol
+GBBU,GBR,true,Buckinghamshire
+GBBW,GBR,true,Blaenau Gwent
+GBCA,GBR,false,Cambridge & Huntingdon
+GBCB,GBR,true,Cambridgeshire
+GBCE,GBR,true,Ceredigion
+GBCF,GBR,true,Cardiff
+GBCH,GBR,false,Cheshire
+GBCK,GBR,true,Clackmannanshire
+GBCM,GBR,true,Carmarthenshire
+GBCN,GBR,true,Conwy
+GBCO,GBR,true,Cornwall
+GBCP,GBR,true,Caerphilly
+GBCR,GBR,false,Central Region
+GBCS,GBR,true,Cheshire
+GBCU,GBR,true,Cumbria
+GBCV,GBR,false,Cleveland
+GBCW,GBR,false,Clwyd
+GBDB,GBR,false,Derby
+GBDD,GBR,true,Dundee
+GBDE,GBR,true,Derby
+GBDH,GBR,true,Durham
+GBDI,GBR,true,Denbighshire
+GBDL,GBR,true,Darlington
+GBDN,GBR,true,Devon
+GBDO,GBR,false,Dorset
+GBDR,GBR,true,Dumfries & Galloway
+GBDS,GBR,true,Derbyshire
+GBDT,GBR,true,Dorset
+GBDU,GBR,false,Durham
+GBDV,GBR,false,Devon
+GBDY,GBR,false,Dyfed
+GBE-,GBR,true,England
+GBEA,GBR,true,East Ayrshire
+GBED,GBR,true,East Dunbartonshire
+GBEH,GBR,true,Edinburgh
+GBEL,GBR,true,East Lothian
+GBER,GBR,true,East Renfrewshire
+GBES,GBR,false,Essex
+GBEX,GBR,true,Essex
+GBEY,GBR,true,East Riding of Yorkshire
+GBFI,GBR,false,Fair Isle
+GBFK,GBR,true,Falkirk
+GBFL,GBR,true,Flintshire
+GBFR,GBR,true,Fife
+GBGD,GBR,false,Gwynedd
+GBGG,GBR,true,Glasgow
+GBGL,GBR,true,Gloucestershire
+GBGM,GBR,false,Glamorgan
+GBGR,GBR,false,Grampian Region
+GBGS,GBR,true,South Gloucestershire
+GBGT,GBR,false,Gwent
+GBGW,GBR,true,Gwynedd
+GBHA,GBR,false,Hampshire
+GBHE,GBR,true,Herefordshire
+GBHF,GBR,false,Hereford & Worcs.
+GBHL,GBR,true,Halton
+GBHM,GBR,true,Hampshire
+GBHP,GBR,true,Hartlepool
+GBHR,GBR,true,Highland
+GBHT,GBR,true,Hertfordshire
+GBHU,GBR,false,Humberside
+GBIC,GBR,true,Inverclyde
+GBIM,GBR,true,Isle of Man
+GBIW,GBR,true,Isle of Wight
+GBKE,GBR,false,Kent
+GBKH,GBR,true,Kingston upon Hull
+GBKN,GBR,true,Kent
+GBLA,GBR,false,Lancashire
+GBLC,GBR,true,Lancashire
+GBLE,GBR,false,Leicester & Rutland
+GBLH,GBR,true,South Lanarkshire
+GBLI,GBR,true,Lincolnshire
+GBLK,GBR,true,North Lanarkshire
+GBLN,GBR,true,North Lincolnshire
+GBLO,GBR,true,Greater London
+GBLR,GBR,false,Lothian Region
+GBLS,GBR,true,Leicestershire
+GBLT,GBR,true,Leicester
+GBLU,GBR,true,Luton
+GBMA,GBR,true,Greater Manchester
+GBMB,GBR,true,Middlesbrough
+GBME,GBR,true,Merseyside
+GBMK,GBR,true,Milton Keynes
+GBML,GBR,true,Midlothian
+GBMN,GBR,true,Monmouthshire
+GBMO,GBR,true,Moray
+GBMT,GBR,true,Merthyr Tydfil
+GBMW,GBR,true,Medway
+GBNA,GBR,true,North Ayrshire
+GBNE,GBR,true,North East Lincolnshire
+GBNG,GBR,true,Nottingham
+GBNH,GBR,true,Northamptonshire
+GBNK,GBR,true,Norfolk
+GBNL,GBR,true,Northumberland
+GBNO,GBR,true,North Yorkshire
+GBNP,GBR,true,Newport
+GBNR,GBR,true,North Somerset
+GBNS,GBR,true,Nottinghamshire
+GBNT,GBR,false,Nottinghamshire
+GBNY,GBR,false,North Yorkshire
+GBOR,GBR,true,Orkney
+GBOX,GBR,true,Oxfordshire
+GBPB,GBR,true,Pembrokeshire
+GBPE,GBR,true,Peterborough
+GBPH,GBR,true,Perth & Kinross
+GBPL,GBR,true,Plymouth
+GBPM,GBR,true,Portsmouth
+GBPO,GBR,false,Powys
+GBPP,GBR,true,Poole
+GBPT,GBR,true,Neath and Port Talbot
+GBPW,GBR,true,Powys
+GBRC,GBR,true,Redcar & Cleveland
+GBRE,GBR,true,Renfrewshire
+GBRG,GBR,true,Reading
+GBRH,GBR,true,Rhondda Cynon Taff
+GBRU,GBR,true,Rutland
+GBS-,GBR,true,Scotland
+GBSA,GBR,false,Salop
+GBSC,GBR,false,Strathclyde Region
+GBSE,GBR,true,Stoke-on-Trent
+GBSF,GBR,true,Staffordshire
+GBSG,GBR,true,Stirling
+GBSH,GBR,true,Shetland
+GBSI,GBR,true,Isles of Scilly
+GBSK,GBR,true,Suffolk
+GBSL,GBR,true,Slough
+GBSN,GBR,true,Swindon
+GBSO,GBR,true,Somerset
+GBSP,GBR,true,Shropshire
+GBSR,GBR,true,Surrey
+GBSS,GBR,true,Southend
+GBST,GBR,false,Staffordshire
+GBSU,GBR,true,Southampton
+GBSW,GBR,true,Swansea
+GBSX,GBR,false,Sussex
+GBSY,GBR,true,South Yorkshire
+GBTF,GBR,true,Telford and Wrekin
+GBTH,GBR,true,Thurrock
+GBTN,GBR,true,Torfaen
+GBTQ,GBR,true,Torbay
+GBTR,GBR,false,Tayside Region
+GBTS,GBR,true,Stockton-on-Tees
+GBTY,GBR,true,Tyne and Wear
+GBU-,GBR,true,Northern Ireland
+GBUA,GBR,true,Antrim
+GBUB,GBR,true,Belfast
+GBUD,GBR,false,Down
+GBUF,GBR,true,Fermanagh
+GBUL,GBR,true,Londonderry
+GBUN,GBR,false,Antrim
+GBUR,GBR,true,Armagh
+GBUT,GBR,true,Tyrone
+GBUW,GBR,true,Down
+GBVG,GBR,true,Vale of Glamorgan
+GBW-,GBR,true,Wales
+GBWA,GBR,true,Warrington
+GBWB,GBR,true,West Berkshire
+GBWD,GBR,true,West Dunbartonshire
+GBWI,GBR,true,Western Isles
+GBWK,GBR,true,Warwickshire
+GBWL,GBR,true,West Lothian
+GBWM,GBR,true,West Midlands
+GBWN,GBR,true,Windsor and Maidenhead
+GBWO,GBR,true,Wokingham
+GBWR,GBR,true,Worcestershire
+GBWS,GBR,true,Wiltshire
+GBWT,GBR,false,Wiltshire
+GBWX,GBR,true,Wrexham
+GBWY,GBR,true,West Yorkshire
+GBXE,GBR,true,East Sussex
+GBXW,GBR,true,West Sussex
+GBYO,GBR,true,York
+GR--,GRC,true,Greece
+GR80,GRC,true,Aegean Islands
+GR81,GRC,true,Ionian Islands
+GR82,GRC,true,Kriti (Crete)
+GR83,GRC,true,Makedonia
+GR84,GRC,true,Peloponnisos
+GR85,GRC,true,Ipeiros
+GR86,GRC,true,Sterea Ellas
+GR87,GRC,true,Thessalia
+GR88,GRC,true,Thraki
+HE--,CHE,true,Switzerland
+HE90,CHE,false,Aargau & Luzern
+HE91,CHE,false,"Appenzell, St. Gallen & Thurgau"
+HE92,CHE,false,"Basselland, Baselstadt & Solothurn"
+HE93,CHE,false,Bern
+HE94,CHE,false,"Fribourg, Geneva, Neuchatel & Vaud"
+HE95,CHE,false,"Glarus, Schwyz, Unterwalden, Uri & Zug"
+HE96,CHE,false,Graub?nden
+HE97,CHE,false,Schaffhausen & Zurich
+HE98,CHE,false,Ticino
+HE99,CHE,false,Valais
+HEAG,CHE,true,Aargau
+HEAI,CHE,true,Appenzell Innerrhoden
+HEAR,CHE,true,Appenzell Ausserrhoden
+HEBE,CHE,true,Bern/Berne
+HEBL,CHE,true,Basselland
+HEBS,CHE,true,Baselstadt
+HEFR,CHE,true,Fribourg/Freiburg
+HEGE,CHE,true,Gen?ve
+HEGL,CHE,true,Glarus
+HEGR,CHE,true,Graub?nden
+HEJU,CHE,true,Jura
+HELU,CHE,true,Luzern
+HENE,CHE,true,Neuch?tel
+HENW,CHE,true,Nidwalden
+HEOW,CHE,true,Obwalden
+HESG,CHE,true,St. Gallen
+HESH,CHE,true,Schaffhausen
+HESO,CHE,true,Solothurn
+HESZ,CHE,true,Schwyz
+HETG,CHE,true,Thurgau
+HETI,CHE,true,Ticino
+HEUR,CHE,true,Uri
+HEVD,CHE,true,Vaud
+HEVS,CHE,true,Valais
+HEZG,CHE,true,Zug
+HEZH,CHE,true,Z?rich
+HG--,HUN,true,Hungary
+HG3-,HUN,true,Hungary West
+HG30,HUN,true,Baranya
+HG31,HUN,true,Fej?r
+HG32,HUN,true,Gy?r-Mosin-Sopron
+HG33,HUN,true,Kom?rom-Esztergom
+HG34,HUN,true,Somogy
+HG35,HUN,true,Tolna
+HG36,HUN,true,Vas
+HG37,HUN,true,Veszpr?m
+HG38,HUN,true,Zala
+HG4-,HUN,true,Hungary East
+HG40,HUN,true,B?cs-Kiskun
+HG41,HUN,true,B?k?s
+HG42,HUN,true,Borsod-Aba?j-Zempl?n
+HG43,HUN,true,Csongr?d
+HG44,HUN,true,Hajdu-Bihar
+HG45,HUN,true,Heves
+HG46,HUN,true,J?sz-Nagykun-Szolnok
+HG47,HUN,true,N?gr?d
+HG48,HUN,true,Pest
+HG49,HUN,true,Szabolcs-Szatm?r-Bereg
+HR--,HRV,true,Croatia
+HR01,HRV,true,Central Croatia
+HR02,HRV,true,Eastern Croatia
+HR03,HRV,true,Mountain Croatia
+HR04,HRV,true,Northern Croatian Coast
+HR05,HRV,true,Southern Croatian Coast
+IA--,ITA,true,Italy
+IA0-,ITA,true,Alpine area
+IA00,ITA,true,Belluno
+IA01,ITA,true,Bergamo
+IA02,ITA,true,Bolzano
+IA03,ITA,true,Brescia
+IA04,ITA,true,Como & Sondrio & Varese
+IA05,ITA,true,Cuneo
+IA06,ITA,true,Novara & Vercelli
+IA07,ITA,true,Torino
+IA08,ITA,true,Trento
+IA09,ITA,true,Valle d'Aosta
+IA1-,ITA,true,Po area
+IA10,ITA,true,Alessandria & Asti
+IA11,ITA,true,Bologna
+IA12,ITA,true,Cremona & Mantova
+IA13,ITA,true,Milano
+IA14,ITA,true,Modena
+IA15,ITA,true,Parma & Reggio n.Emilia
+IA16,ITA,true,Pavia
+IA17,ITA,true,Piacenza
+IA18,ITA,true,Verona
+IA19,ITA,true,Vicenza
+IA2-,ITA,true,North Tyrrhenian
+IA20,ITA,true,Arezzo
+IA21,ITA,true,Firenze
+IA22,ITA,true,Genova & Massa; Carrara & La Spezia
+IA23,ITA,true,Grosseto
+IA24,ITA,true,Imperia & Savona
+IA25,ITA,true,Livorno & Pisa
+IA26,ITA,true,Lucca & Pistoia
+IA27,ITA,true,Siena
+IA28,ITA,true,Terni
+IA29,ITA,true,Viterbo
+IA3-,ITA,true,North Adriatic
+IA30,ITA,true,Ancona & Pesaro e Urbino
+IA31,ITA,true,Ascoli Piceno & Macerata
+IA32,ITA,true,Ferrara & Rovigo
+IA33,ITA,true,Forli
+IA34,ITA,true,Gorizia & Udine
+IA35,ITA,true,Padova
+IA36,ITA,true,Perugia
+IA37,ITA,true,Ravenna
+IA38,ITA,true,Treviso
+IA39,ITA,true,Venezia
+IA4-,ITA,true,South Tyrrhenian
+IA40,ITA,true,Avellino
+IA41,ITA,true,Benevento
+IA42,ITA,true,Caserta & Napoli
+IA43,ITA,true,Catanzaro
+IA44,ITA,true,Cosenza
+IA45,ITA,true,Frosinone & Latina
+IA46,ITA,true,Potenza
+IA47,ITA,true,Reggio di Calabria
+IA48,ITA,true,Roma
+IA49,ITA,true,Salerno
+IA5-,ITA,true,South Adriatic
+IA50,ITA,true,L?Aquila d.Abruzzi
+IA51,ITA,true,Bari
+IA52,ITA,true,Brindisi & Lecce
+IA53,ITA,true,Campobasso
+IA54,ITA,true,Chieti
+IA55,ITA,true,Foggia
+IA56,ITA,true,Matera
+IA57,ITA,true,Pescara & Teramo
+IA58,ITA,true,Rieti
+IA59,ITA,true,Taranto (Ionio)
+IA6-,ITA,true,Italian Islands
+IA61,ITA,true,Elba
+IA62,ITA,true,Sardegna (Sardinia)
+IA63,ITA,true,Sicilia (including islands to W & N)
+IA64,ITA,true,not used
+IA65,ITA,true,Pantelleria
+IA66,ITA,true,Isole Pelagie
+IA76,ITA,true,Trieste
+IS--,ISL,true,Iceland
+IS01,ISL,true,Reykjav?k
+IS02,ISL,true,Kj?sars?sla
+IS03,ISL,true,Borgarfjar?ars?sla
+IS04,ISL,true,M?ras?sla
+IS05,ISL,true,Hnappadalss?sla
+IS06,ISL,true,Sn?fellsness?sla
+IS07,ISL,true,Dalas?sla
+IS08,ISL,true,Austur-Bar?astrandas?sla
+IS09,ISL,true,Vestur-Bar?astrandas?sla
+IS10,ISL,true,Vestur-?safjar?ars?sla
+IS11,ISL,true,Nor?ur-?safjar?ars?sla
+IS12,ISL,true,Strandas?sla
+IS13,ISL,true,Vestur-H?navatnss?sla
+IS14,ISL,true,Austur-H?navatnss?sla
+IS15,ISL,true,Skagafjar?ars?sla
+IS16,ISL,true,Eyjafjar?ars?sla
+IS17,ISL,true,Su?ur-?ingeyjars?sla
+IS18,ISL,true,Nor?ur-?ingeyjars?sla
+IS19,ISL,true,Nor?ur-M?las?sla
+IS20,ISL,true,Su?ur-M?las?sla
+IS21,ISL,true,Austur-Skaftafellss?sla
+IS22,ISL,true,Vestur-Skaftafellss?sla
+IS23,ISL,true,Rang?rvallas?sla
+IS24,ISL,true,?rness?sla
+IS25,ISL,true,Gullbringus?sla
+IS26,ISL,true,Vestmannaeyjar
+IS27,ISL,true,Mi?h?lendi
+KN00,LUX,true,Luxembourg
+KN29,LUX,false,Luxembourg
+LI00,LTU,true,Lithuania
+LV00,LVA,true,Latvia
+MD00,MDA,true,Moldova
+ME00,MNE,true,Montenegro
+MK00,MKD,true,North Macedonia
+ML00,MLT,true,Malta
+NB00,GIB,true,Gibraltar
+NB60,GIB,false,Gibraltar
+NL--,NLD,true,Netherlands
+NL00,NLD,true,Texel
+NL01,NLD,true,Vlieland
+NL02,NLD,true,Griend
+NL03,NLD,true,Terschelling
+NL04,NLD,true,Drenthe
+NL05,NLD,true,Friesland
+NL06,NLD,true,Gelderland
+NL07,NLD,true,Groningen
+NL08,NLD,true,Limburg
+NL09,NLD,true,Noord-Brabant
+NL11,NLD,true,Ameland
+NL12,NLD,true,Schiermonnikoog
+NL13,NLD,true,Rottumeroog
+NL14,NLD,true,Noord-Holland
+NL15,NLD,true,Overijssel
+NL16,NLD,true,Utrecht
+NL17,NLD,true,IJsselmeerpolders
+NL18,NLD,true,Zeeland
+NL19,NLD,true,Zuid-Holland
+NO--,NOR,true,Norway
+NO20,NOR,true,Akershus (Oslo included)
+NO21,NOR,true,Aust-Agder
+NO22,NOR,true,Buskerud
+NO23,NOR,true,Finnmark
+NO24,NOR,true,Hedmark
+NO25,NOR,true,Hordaland (Bergen included)
+NO26,NOR,true,M?re og Romsdal
+NO27,NOR,true,Nordland
+NO28,NOR,true,Nord-Tr0ndelag
+NO29,NOR,true,Opland
+NO30,NOR,true,?stfold
+NO31,NOR,true,Rogaland
+NO32,NOR,true,Sogn og Fjordane
+NO33,NOR,true,S?r-Tr?ndelag
+NO34,NOR,true,Telemark
+NO35,NOR,true,Troms
+NO36,NOR,true,Vest-Agder
+NO37,NOR,true,Vestfold
+PL--,POL,true,Poland
+PL8-,POL,false,Poland (northwest)
+PL80,POL,false,Bydgoszsz (Bromberg)
+PL81,POL,false,Gdansk (Danzig)
+PL82,POL,false,Koszalin (K?slin)
+PL83,POL,false,Olsztyn (Allenstein)
+PL84,POL,false,Poznan (Posen)
+PL85,POL,false,Szczecin (Stettin)
+PL86,POL,false,Zielona Gora (Gr?nberg)
+PL9-,POL,false,Poland (southeast)
+PL90,POL,false,Bialystok
+PL91,POL,false,Kielce
+PL92,POL,false,Krakow
+PL93,POL,false,Lodz
+PL94,POL,false,Lublin
+PL95,POL,false,Opole (Oppeln)
+PL96,POL,false,Rzeszow
+PL97,POL,false,Stalinograd (Katowice)
+PL98,POL,false,Warszawa (Warschau)
+PL99,POL,false,Wroclaw (Breslau)
+PLAL,POL,false,Koszalin
+PLBB,POL,false,Bielsko-Biala
+PLBE,POL,true,Lubelskie
+PLBP,POL,false,Biala Podlaska
+PLBT,POL,false,Bialystok
+PLBU,POL,true,Lubuskie
+PLBY,POL,false,Bydgoszcz
+PLCH,POL,false,Chelm
+PLCZ,POL,false,Czestochowa
+PLDL,POL,false,Siedlce
+PLDO,POL,true,Dolnoslaskie
+PLDZ,POL,false,Sieradz
+PLEL,POL,false,Elblag
+PLGD,POL,false,Gdansk
+PLGW,POL,false,Gorz?w Wielkopolski
+PLHA,POL,false,Ciechan?w
+PLHH,POL,false,Lodz
+PLIC,POL,false,Katowice
+PLIS,POL,false,Kalisz
+PLJG,POL,false,Jelenia G?ra
+PLKP,POL,true,Kujawsko-Pomorskie
+PLKW,POL,false,Krak?w
+PLLA,POL,false,Legnica
+PLLC,POL,false,Kielce
+PLLO,POL,true,L?dzkie
+PLLS,POL,false,Leszno
+PLLU,POL,false,Lublin
+PLMP,POL,true,Malopolskie
+PLMZ,POL,true,Mazowieckie
+PLNS,POL,false,Nowy Sacz
+PLOA,POL,false,Ostroleka
+PLOE,POL,true,Opolskie
+PLOL,POL,false,Olsztyn
+PLOM,POL,false,Lomza
+PLON,POL,false,Konin
+PLOP,POL,false,Opole
+PLPA,POL,false,Pila
+PLPC,POL,true,Podkarpackie
+PLPK,POL,false,Plock
+PLPM,POL,true,Pomorskie
+PLPN,POL,false,Poznam
+PLPR,POL,false,Przemysl
+PLPS,POL,true,Podlaskie
+PLPT,POL,false,Piotrk?w Trybunalski
+PLRM,POL,false,Radom
+PLRN,POL,false,Skierniewice
+PLRO,POL,false,Krosno
+PLRZ,POL,false,Rzesz?w
+PLSL,POL,true,Slaskie
+PLSU,POL,false,Suwalki
+PLSW,POL,true,Swietokrzyskie
+PLSZ,POL,false,Szczecin
+PLTG,POL,false,Tarnobrzeg
+PLTO,POL,false,Torun
+PLTV,POL,false,Tarn?w
+PLUP,POL,false,Slupsk
+PLWH,POL,false,Walbrzych
+PLWI,POL,true,Wielkopolskie
+PLWK,POL,false,Wloclawek
+PLWM,POL,true,Warminsko-Mazurskie
+PLWW,POL,false,Wroclaw
+PLWZ,POL,false,Warszawa
+PLZA,POL,false,Zamosc
+PLZG,POL,false,Zielona G?ra
+PLZP,POL,true,Zachodnio-Pomorskie
+PO--,PRT,true,Portugal
+PO01,PRT,true,Aveiro
+PO02,PRT,true,Beja
+PO03,PRT,true,Braga
+PO04,PRT,true,Bragan?a
+PO05,PRT,true,Castelo Branco
+PO06,PRT,true,Coimbra
+PO07,PRT,true,?vora
+PO08,PRT,true,Faro
+PO09,PRT,true,Guarda
+PO10,PRT,true,Leiria
+PO11,PRT,true,Lisboa
+PO12,PRT,true,Portalegre
+PO13,PRT,true,Porto
+PO14,PRT,true,Santar?m
+PO15,PRT,true,Set?bal
+PO16,PRT,true,Viana do Castelo
+PO17,PRT,true,Vila Real
+PO18,PRT,true,Viseu
+PO19,PRT,true,"Ilha da Terceira, Azores"
+PO20,PRT,true,"Ilha do Faial, Azores"
+PO21,PRT,true,"Ilha de S?o Miguel, Azores"
+PO22,PRT,true,"Ilha da Madeira, Madeira"
+PO23,PRT,true,"Ilha de Santa Maria, Azores"
+PO24,PRT,true,"Ilha Graciosa, Azores"
+PO25,PRT,true,"Ilha de S?o Jorge, Azores"
+PO26,PRT,true,"Ilha do Pico, Azores"
+PO27,PRT,true,"Ilha das Flores, Azores"
+PO28,PRT,true,"Ilha do Corvo, Azores"
+PO29,PRT,true,"Ilha de Porto Santo, Madeira"
+RA48,ITA,true,Vatican City
+RO--,ROU,true,Romania
+RO5-,ROU,false,Romania (Northwest)
+RO50,ROU,false,Arad
+RO51,ROU,false,Baz?u
+RO52,ROU,false,Baia Mare
+RO53,ROU,false,Cluj (Kolozsv?r)
+RO54,ROU,false,Hunedoara
+RO55,ROU,false,Magyar Autonomous Region
+RO56,ROU,false,Oradea (Nagyvarad)
+RO57,ROU,false,Brasov (Orasul Stalin)
+RO58,ROU,false,Suceava
+RO59,ROU,false,Timisoara
+RO6-,ROU,false,Romania (Southwest)
+RO60,ROU,false,Barlad
+RO61,ROU,false,Bucuresti (Bucharest)
+RO62,ROU,false,Constanta
+RO63,ROU,false,Craiova
+RO64,ROU,false,Galati (Galatz)
+RO65,ROU,false,Iasi (Jassy)
+RO66,ROU,false,Pitesti
+RO67,ROU,false,Ploesti
+ROAB,ROU,true,Alba
+ROAG,ROU,true,Arges
+ROAR,ROU,true,Arad
+ROB-,ROU,true,Bucuresti
+ROBC,ROU,true,Bacau
+ROBH,ROU,true,Bihor
+ROBN,ROU,true,Bistrita-Nasaud
+ROBR,ROU,true,Braila
+ROBT,ROU,true,Botosani
+ROBV,ROU,true,Brasov
+ROBZ,ROU,true,Buzau
+ROCJ,ROU,true,Cluj
+ROCL,ROU,true,Calarasi
+ROCS,ROU,true,Caras-Severin
+ROCT,ROU,true,Constanta
+ROCV,ROU,true,Covasna
+RODB,ROU,true,Dambovita
+RODJ,ROU,true,Dolj
+ROGJ,ROU,true,Gorj
+ROGL,ROU,true,Galati
+ROGR,ROU,true,Giurgiu
+ROHD,ROU,true,Hunedoara
+ROHR,ROU,true,Harghita
+ROIF,ROU,true,Ilfov
+ROIL,ROU,true,Ialomita
+ROIS,ROU,true,Iasi
+ROMH,ROU,true,Mehedinti
+ROMM,ROU,true,Maramures
+ROMS,ROU,true,Mures
+RONT,ROU,true,Neamt
+ROOT,ROU,true,Olt
+ROPH,ROU,true,Prahova
+ROSB,ROU,true,Sibiu
+ROSJ,ROU,true,Salaj
+ROSM,ROU,true,Satu Mare
+ROSV,ROU,true,Suceava
+ROTL,ROU,true,Tulcea
+ROTM,ROU,true,Timis
+ROTR,ROU,true,Teleorman
+ROVL,ROU,true,Valcea
+ROVN,ROU,true,Vrancea
+ROVS,ROU,true,Vaslui
+RS--,SRB,true,Serbia
+RS74,SRB,true,Kosovo
+RS77,SRB,true,Serbia
+RS78,SRB,true,Vojvodina
+RU--,RUS,true,Russia
+RU01,RUS,true,Murmansk O.
+RU02,RUS,true,Karelia
+RU03,RUS,true,Leningrad O.
+RU04,RUS,true,Kaliningrad O.
+RU05,RUS,true,Pskov O.
+RU06,RUS,true,Novgorod O.
+RU07,RUS,true,Arkhangelsk O.
+RU08,RUS,true,Nenets A.O.
+RU09,RUS,true,Komi
+RU10,RUS,true,Franz Josef Land
+RU11,RUS,true,Novaya Zemlya
+RU12,RUS,true,Vologda O.
+RU13,RUS,true,Yaroslavl' O.
+RU14,RUS,true,Tver' O.
+RU15,RUS,true,Kostroma O.
+RU16,RUS,true,Ivanovo O.
+RU17,RUS,true,Moscow O.
+RU18,RUS,true,Vladimir O.
+RU19,RUS,true,Smolensk O.
+RU20,RUS,true,Kaluga O.
+RU21,RUS,true,Tula O.
+RU22,RUS,true,Ryazan' O.
+RU23,RUS,true,Kirov O.
+RU24,RUS,true,Perm' O.
+RU25,RUS,true,Udmurtia
+RU26,RUS,true,Nizhniy Novgorod O.
+RU27,RUS,true,Mariy El
+RU28,RUS,true,Chuvashia
+RU29,RUS,true,Mordovia O.
+RU30,RUS,true,Tataria
+RU31,RUS,true,Ul'yanovsk O.
+RU32,RUS,true,Penza O.
+RU33,RUS,true,Samara O.
+RU34,RUS,true,Saratov O.
+RU35,RUS,true,Bryansk O.
+RU36,RUS,true,Orel O.
+RU37,RUS,true,Kursk O.
+RU38,RUS,true,Lipetsk O.
+RU39,RUS,true,Tambov O.
+RU40,RUS,true,Voronezh O.
+RU41,RUS,true,Belgorod O.
+RU42,RUS,true,Volgograd O.
+RU43,RUS,true,Rostov O.
+RU44,RUS,true,Astrakhan' O.
+RU45,RUS,true,Kalmykia
+RU46,RUS,true,Krasnodar
+RU47,RUS,true,Stavropol' O.
+RU48,RUS,true,Karachayevo-Cherkessia
+RU49,RUS,true,Kabardino-Balkaria
+RU50,RUS,true,Severnaya Osetia
+RU51,RUS,true,Ingushetia
+RU52,RUS,true,Chechnya
+RU53,RUS,true,Dagestan
+RU54,RUS,true,SVERDLOVSK O.
+RU55,RUS,true,Kurgan O.
+RU56,RUS,true,Chelyabinsk O.
+RU57,RUS,true,Bashkiria
+RU58,RUS,true,Orenburg O.
+RU60,RUS,true,Yamal-Nenets A.O.
+RU61,RUS,true,Khanty-Mansi A.O.
+RU62,RUS,true,Tyumen' O.
+RU63,RUS,true,Omsk O.
+RU64,RUS,true,Tomsk O.
+RU65,RUS,true,Novosibirsk O.
+RU66,RUS,true,Kemerovo O.
+RU67,RUS,true,Altay (incl. Gorno-Altaysk)
+RU68,RUS,true,Severnaya Zemlya Islands
+RU69,RUS,true,Taymyr A.O.
+RU70,RUS,true,Evenkiy A.O.
+RU71,RUS,true,Krasnoyarsk
+RU72,RUS,true,Khakassia
+RU73,RUS,true,Tuva
+RU74,RUS,true,Irkutsk O.
+RU75,RUS,true,Buryatia
+RU76,RUS,true,Chita O.
+RU77,RUS,true,Novosibirskiye Islands
+RU78,RUS,true,Yakutia-Sakha
+RU79,RUS,true,Wrangel Island
+RU80,RUS,true,Chukotka
+RU81,RUS,true,Magadan O.
+RU82,RUS,true,Kamchatka O.
+RU83,RUS,true,Amur O.
+RU84,RUS,true,Khabarovsk
+RU85,RUS,true,Primorskiy
+RU86,RUS,true,Sakhalin O.
+RU87,RUS,true,Kuril Islands
+RUBS,RUS,true,Baikal Region
+RUCB,RUS,true,Central Blacksoil Region
+RUCE,RUS,true,Centre of European Russia
+RUCS,RUS,true,Central Siberia
+RUFE,RUS,true,Far East
+RUMV,RUS,true,Middle Volga
+RUNC,RUS,true,North Caucasus
+RUNE,RUS,true,North-East
+RUNR,RUS,true,North of European Russia
+RUNW,RUS,true,North-West European Russia
+RUSS,RUS,true,South-Western Siberia
+RUSU,RUS,true,Southern Ural
+RUVD,RUS,true,Volgo-Don Region
+RUVV,RUS,true,Volgo-Vyatka Region
+RUWS,RUS,true,Western Siberia
+RUYS,RUS,true,Yakutia
+SF--,FIN,true,Finland
+SF80,FIN,true,H?me
+SF81,FIN,true,Kuopio
+SF82,FIN,true,Kymi
+SF83,FIN,true,Lappi
+SF84,FIN,true,Mikkeli
+SF85,FIN,true,Oulu
+SF86,FIN,true,Turku-Pori
+SF87,FIN,true,Uusimaa
+SF88,FIN,true,Vaasa
+SF90,FIN,true,Ahvenanmaa
+SK--,SVK,true,Slovakia
+SK20,SVK,false,Banskobystricky Kraj
+SK21,SVK,false,Bratislavsky Kraj
+SK24,SVK,false,Ko?icky Kraj
+SK25,SVK,false,Nitriansky Kraj
+SK28,SVK,false,Pre?ovsky Kraj
+SK29,SVK,false,Zilinsky Kraj
+SKBA,SVK,true,Bratislava I; II; III; IV; V
+SKBB,SVK,true,Banska Bystrica
+SKBJ,SVK,true,Bardejov
+SKBN,SVK,true,Banovce nad Bebravou
+SKBR,SVK,true,Brezno
+SKBS,SVK,true,Banska ?tiavnica
+SKBY,SVK,true,Bytca
+SKCA,SVK,true,Cadca
+SKDK,SVK,true,Dolny Kubin
+SKDS,SVK,true,Dunajska Streda
+SKDT,SVK,true,Detva
+SKGA,SVK,true,Galanta
+SKGL,SVK,true,Gelnica
+SKHC,SVK,true,Hlohovec
+SKHE,SVK,true,Humenne
+SKIL,SVK,true,Ilava
+SKKA,SVK,true,Krupina
+SKKE,SVK,true,Kosice I; II; III; IV
+SKKK,SVK,true,Kezmarok
+SKKM,SVK,true,Kysucke Nove Mesto
+SKKN,SVK,true,Komarna
+SKKS,SVK,true,Kosice;okolie
+SKLC,SVK,true,Lucenec
+SKLE,SVK,true,Levoca
+SKLM,SVK,true,Liptovsky Mikulas
+SKLV,SVK,true,Levice
+SKMA,SVK,true,Malacky
+SKMI,SVK,true,Michalovce
+SKML,SVK,true,Medzilaborce
+SKMT,SVK,true,Martin
+SKMY,SVK,true,Myjava
+SKNM,SVK,true,Nove Mesto nad Vahom
+SKNO,SVK,true,Namestovo
+SKNR,SVK,true,Nitra
+SKNZ,SVK,true,Nove Zamky
+SKPB,SVK,true,Povazska Bystrica
+SKPD,SVK,true,Prievidza
+SKPE,SVK,true,Partizanske
+SKPI,SVK,true,Piestany
+SKPK,SVK,true,Pezinok
+SKPO,SVK,true,Presov
+SKPP,SVK,true,Poprad
+SKPT,SVK,true,Poltar
+SKPU,SVK,true,Puchov
+SKRA,SVK,true,Revuca
+SKRK,SVK,true,Ruzomberok
+SKRS,SVK,true,Rimavska Sobota
+SKRV,SVK,true,Roznava
+SKSA,SVK,true,Sala
+SKSB,SVK,true,Sabinov
+SKSC,SVK,true,Senec
+SKSE,SVK,true,Senica
+SKSI,SVK,true,Skalica
+SKSK,SVK,true,Svidnik
+SKSL,SVK,true,Stara Lubovna
+SKSN,SVK,true,Spisska Nova Ves
+SKSO,SVK,true,Sobrance
+SKSP,SVK,true,Stropkov
+SKSV,SVK,true,Snina
+SKTN,SVK,true,Trencin
+SKTO,SVK,true,Topolcany
+SKTR,SVK,true,Turcianske Teplice
+SKTS,SVK,true,Tvrdosin
+SKTT,SVK,true,Trnava
+SKTV,SVK,true,Trebisov
+SKVK,SVK,true,Velky Krtis
+SKVT,SVK,true,Vranov nad Toplou
+SKZA,SVK,true,Zilina
+SKZC,SVK,true,Zarnovica
+SKZH,SVK,true,Ziar nad Hronom
+SKZM,SVK,true,Zlate Moravce
+SKZV,SVK,true,Zvolen
+SL00,SVN,true,Slovenia
+SU2-,BLR,false,Belarus
+SU20,BLR,false,Brest O.
+SU22,BLR,false,Gomel O.
+SU23,BLR,false,Grodno O.
+SU25,BLR,false,Minsk O.
+SU26,BLR,false,Mogilev O.
+SU28,BLR,false,Vitebsk O.
+SV40,SWE,true,Alvsborg
+SV41,SWE,true,Blekinge
+SV42,SWE,true,G?vleborg
+SV43,SWE,true,G?teborg och Bohus
+SV44,SWE,true,Halland
+SV45,SWE,true,J?mtland
+SV46,SWE,true,J?nk?ping
+SV47,SWE,true,Kalmar
+SV48,SWE,true,Kopparberg
+SV49,SWE,true,Kristianstad
+SV50,SWE,true,Kronoberg
+SV51,SWE,true,Malm?hus
+SV52,SWE,true,Norrbotten
+SV53,SWE,true,?rebro
+SV54,SWE,true,?sterg?tland
+SV55,SWE,true,Skaraborg
+SV56,SWE,true,S?dermanland
+SV57,SWE,true,Stockholm
+SV58,SWE,true,Uppsala
+SV59,SWE,true,V?rmland
+SV60,SWE,true,V?sterbotten
+SV61,SWE,true,V?sternorrland
+SV62,SWE,true,V?stmanland
+SV63,SWE,true,Sk?ne
+SV64,SWE,true,V?stra G?taland
+SV70,SWE,true,Gotland
+SV71,SWE,true,?land
+TU00,TUR,true,Turkey
+UK--,UKR,true,Ukraine
+UK50,UKR,true,Cherkassy O.
+UK51,UKR,true,Chernigiv O.
+UK52,UKR,true,Chernivtsy O.
+UK53,UKR,true,Dnipropetrovsk O.
+UK54,UKR,true,Donetsk O.
+UK55,UKR,true,Kharkiv O.
+UK56,UKR,true,Kherson O.
+UK57,UKR,true,Khmel'nitskiy O.
+UK58,UKR,true,Kirovograd O.
+UK59,UKR,true,Kyiv O.
+UK60,UKR,true,Krym
+UK61,UKR,true,Lugansk O.
+UK62,UKR,true,Volynska O.
+UK63,UKR,true,Lviv O.
+UK65,UKR,true,Mikolayiv O.
+UK66,UKR,true,Odesa O.
+UK67,UKR,true,Poltava O.
+UK68,UKR,true,Rivne O.
+UK69,UKR,true,Ivano-Frankivsk O.
+UK70,UKR,true,Sumy O.
+UK71,UKR,true,Ternopil' O.
+UK72,UKR,true,Zakarpatska O.
+UK73,UKR,true,Vinnitsa O.
+UK74,UKR,true,Zaporizhzhya O.
+UK75,UKR,true,Zhitomir O.
+WR80,MCO,true,Monaco
+ZA33,SMR,true,San Marino

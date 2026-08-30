@@ -12,14 +12,14 @@ class UserAdmin(DjangoUserAdmin):
     """Admin for the custom email-based User model."""
 
     ordering = ["email"]
-    list_display = ["email", "language", "is_staff", "is_active", "created_at"]
+    list_display = ["email", "language", "is_staff", "is_active", "created"]
     list_filter = ["is_staff", "is_active"]
     search_fields = ["email"]
-    readonly_fields = ["created_at", "updated_at"]
+    readonly_fields = ["created", "modified"]
 
     fieldsets = (
         (None, {"fields": ("email", "password")}),
-        (_("Preferences"), {"fields": ("language",)}),
+        (_("Preferences"), {"fields": ("language", "script")}),
         (
             _("Permissions"),
             {
@@ -34,7 +34,7 @@ class UserAdmin(DjangoUserAdmin):
         ),
         (
             _("Timestamps"),
-            {"fields": ("created_at", "updated_at"), "classes": ("collapse",)},
+            {"fields": ("created", "modified"), "classes": ("collapse",)},
         ),
     )
     add_fieldsets = (

@@ -6,10 +6,11 @@ Environment is controlled by the DJANGO_ENV environment variable:
   - 'production': Optimised for deployment, S3 storage, Sentry, etc.
 """
 
-import os
 from pathlib import Path
 
 import environ
+from django.conf import global_settings
+from django.utils.translation import gettext_lazy as _
 
 # ---------------------------------------------------------------------------
 # Base paths
@@ -24,7 +25,6 @@ environ.Env.read_env(BASE_DIR / ".env")
 
 DJANGO_ENV = env.str("DJANGO_ENV", default="production")
 DEBUG = DJANGO_ENV == "development"
-TESTING = env.bool("TESTING", default=False)
 
 # ---------------------------------------------------------------------------
 # Security
@@ -39,34 +39,17 @@ CSRF_TRUSTED_ORIGINS = env.list(
 # ---------------------------------------------------------------------------
 # Application definition
 # ---------------------------------------------------------------------------
-DJANGO_APPS = [
+INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.postgres",
     "django.contrib.staticfiles",
-    "django.contrib.sites",
-]
-
-THIRD_PARTY_APPS = [
-    # Authentication
-    "allauth",
-    "allauth.account",
-    # HTMX
     "django_htmx",
-    # Health checks (v4.x — checks are configured via HealthCheckView in urls.py)
-    "health_check",
-    # Celery Beat
-    "django_celery_beat",
-]
-
-LOCAL_APPS = [
     "apps.users",
+    "apps.core",
 ]
-
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 if DJANGO_ENV == "development":
     INSTALLED_APPS += [
@@ -82,12 +65,13 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "apps.core.middleware.ScriptMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "allauth.account.middleware.AccountMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
 ]
 
@@ -129,25 +113,8 @@ TEMPLATES = [
 # ---------------------------------------------------------------------------
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": env.str("DB_NAME", default="crbirding"),
-        "USER": env.str("DB_USER", default="crbirding"),
-        "PASSWORD": env.str("DB_PASSWORD", default="crbirding"),
-        "HOST": env.str("DB_HOST", default="db"),
-        "PORT": env.str("DB_PORT", default="5432"),
-        "CONN_MAX_AGE": env.int("DB_CONN_MAX_AGE", default=60),
-    }
-}
-
-# ---------------------------------------------------------------------------
-# Cache (Redis)
-# ---------------------------------------------------------------------------
-REDIS_URL = env.str("REDIS_URL", default="redis://redis:6379/0")
-
-CACHES = {
-    "default": {
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": REDIS_URL,
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "crbirding.db",
     }
 }
 
@@ -168,13 +135,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
-    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
-# ---------------------------------------------------------------------------
-# Site
-# ---------------------------------------------------------------------------
-SITE_ID = env.int("SITE_ID", default=1)
+LOGIN_URL = "account_login"
+LOGIN_REDIRECT_URL = "accounts:dashboard"
+LOGOUT_REDIRECT_URL = "core:home"
 
 # ---------------------------------------------------------------------------
 # Email
@@ -219,44 +184,13 @@ if DJANGO_ENV == "development":
     }
 
 # ---------------------------------------------------------------------------
-# Media files / S3 Storage
+# Media files
 # ---------------------------------------------------------------------------
-USE_S3 = env.bool("USE_S3", default=False)
-
-if USE_S3:
-    AWS_ACCESS_KEY_ID = env.str("AWS_ACCESS_KEY_ID")
-    AWS_SECRET_ACCESS_KEY = env.str("AWS_SECRET_ACCESS_KEY")
-    AWS_STORAGE_BUCKET_NAME = env.str("AWS_STORAGE_BUCKET_NAME", default="crbirding")
-    AWS_S3_ENDPOINT_URL = env.str("AWS_S3_ENDPOINT_URL", default=None)
-    AWS_S3_REGION_NAME = env.str("AWS_S3_REGION_NAME", default="us-east-1")
-    AWS_DEFAULT_ACL = env.str("AWS_DEFAULT_ACL", default="private")
-    AWS_S3_FILE_OVERWRITE = False
-    AWS_QUERYSTRING_AUTH = True
-    AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
-
-    STORAGES["default"] = {
-        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
-    }
-    MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/"
-else:
-    STORAGES["default"] = {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    }
-    MEDIA_URL = "/media/"
-    MEDIA_ROOT = BASE_DIR / "media"
-
-# ---------------------------------------------------------------------------
-# Celery
-# ---------------------------------------------------------------------------
-CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", default="redis://redis:6379/1")
-CELERY_RESULT_BACKEND = env.str("CELERY_RESULT_BACKEND", default="redis://redis:6379/2")
-CELERY_ACCEPT_CONTENT = ["json"]
-CELERY_TASK_SERIALIZER = "json"
-CELERY_RESULT_SERIALIZER = "json"
-CELERY_TIMEZONE = "UTC"
-CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
-CELERY_TASK_TRACK_STARTED = True
-CELERY_TASK_TIME_LIMIT = 30 * 60  # 30 minutes
+STORAGES["default"] = {
+    "BACKEND": "django.core.files.storage.FileSystemStorage",
+}
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # ---------------------------------------------------------------------------
 # Internationalisation
@@ -265,6 +199,37 @@ LANGUAGE_CODE = "en-gb"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
+
+# The UI languages this deployment exposes (language switcher, admin,
+# LocaleMiddleware). This is deliberately separate from how many
+# languages the species reference data covers -- a deployment might only
+# expose "en,nl" here while still storing SpeciesName rows in every
+# language the reference file has, since unused rows cost nothing.
+# Comma-separated ISO 639-1 codes, e.g. LANGUAGES=en,nl,de
+_all_language_names = dict(global_settings.LANGUAGES)
+LANGUAGES = [
+    (code, _all_language_names.get(code, code)) for code in env.list("LANGUAGES", default=["en"])
+]
+
+# The scripts this deployment collects Location/Place names in (see
+# ScriptField/ScriptWidget). Same pattern as LANGUAGES above: a small,
+# deployer-configurable subset of a larger fixed set. Kept as a plain
+# literal, not imported from apps.core.models.script.Script -- settings.py
+# is evaluated before Django's app registry is ready, so it can't import
+# real model code this early. Keep in sync with Script's own choices by
+# hand. Comma-separated ISO 15924 codes, e.g. SCRIPTS=Latn,Cyrl
+_all_script_names = {
+    "Arab": _("Arabic"),
+    "Armn": _("Armenian"),
+    "Cyrl": _("Cyrillic"),
+    "Geor": _("Georgian"),
+    "Grek": _("Greek"),
+    "Hebr": _("Hebrew"),
+    "Latn": _("Latin"),
+}
+SCRIPTS = [
+    (code, _all_script_names.get(code, code)) for code in env.list("SCRIPTS", default=["Latn"])
+]
 
 # ---------------------------------------------------------------------------
 # Default primary key field type

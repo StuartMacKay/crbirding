@@ -1,0 +1,562 @@
+reason,detail
+country not in Country list,Aden /  / AI00
+country not in Country list,Afghanistan /  / GN00
+country not in Country list,Algeria /  / AG--
+country not in Country list,Algeria / Alger / AGAL
+country not in Country list,Algeria / Constantine / AGCO
+country not in Country list,Algeria / Oran / AGOR
+country not in Country list,Algeria / Other provinces / AGTS
+country not in Country list,Angola /  / AL00
+country not in Country list,Antarctica /  / AN00
+country not in Country list,Argentina /  / BJ00
+country not in Country list,Armenia /  / AE00
+country not in Country list,Australia /  / AA--
+country not in Country list,Australia / New South Wales / AANS
+country not in Country list,Australia / Northern Territory / AANT
+country not in Country list,Australia / Queensland / AAQU
+country not in Country list,Australia / South Australia / AASA
+country not in Country list,Australia / Tasmania / AATA
+country not in Country list,Australia / Victoria / AAVI
+country not in Country list,Australia / Western Australia / AAWA
+country not in Country list,Azerbaijan /  / AK--
+country not in Country list,Azerbaijan / Nagornyy Karabakh / AK01
+country not in Country list,Azerbaijan /  / SU92
+country not in Country list,Bahamas /  / TJ00
+country not in Country list,Bahrain & Qatar /  / AZ00
+country not in Country list,Bangladesh /  / RN00
+country not in Country list,Bear Island /  / +ABI
+country not in Country list,Belize /  / CABA
+country not in Country list,Benin /  / XY00
+country not in Country list,Bermuda /  / +HBE
+country not in Country list,Bhutan /  / QA00
+country not in Country list,Bioco /  / YH00
+country not in Country list,Bolivia /  / SABA
+country not in Country list,Borneo / Brunei / OVB0
+country not in Country list,Borneo / Indonesian part / OVI0
+country not in Country list,Borneo / Malaysian part / OVM0
+country not in Country list,Borneo Island /  / OV00
+country not in Country list,Botswana /  / WG00
+country not in Country list,Brazil /  / BA00
+country not in Country list,British Indian Ocean Territories /  / IO00
+country not in Country list,Burkina Faso /  / VU00
+country not in Country list,Burma /  / FE00
+country not in Country list,Burundi /  / PX00
+country not in Country list,C?te d`Ivoire /  / PY00
+country not in Country list,Cambodia /  / FNCA
+country not in Country list,Cameroon /  / QQ00
+country not in Country list,Canada /  / EA--
+country not in Country list,Canada / Alberta / EAAL
+country not in Country list,Canada / British Columbia / EABC
+country not in Country list,Canada / Labrador / EALA
+country not in Country list,Canada / Manitoba / EAMA
+country not in Country list,Canada / New Brunswick / EANB
+country not in Country list,Canada / Newfoundland / EANF
+country not in Country list,Canada / Nova Scotia / EANS
+country not in Country list,Canada / North West Territories / EANW
+country not in Country list,Canada / Ontario / EAON
+country not in Country list,Canada / Prince Edward Island / EAPE
+country not in Country list,Canada / Quebec / EAQU
+country not in Country list,Canada / Saskatchewan / EASA
+country not in Country list,Cape Verde Islands /  / +HCV
+country not in Country list,Central African Republic /  / QH00
+country not in Country list,Central America /  / CA--
+country not in Country list,Central America /  / CA00
+country not in Country list,Ceuta /  / DA00
+country not in Country list,Chad /  / FT00
+country not in Country list,Chile /  / KA00
+country not in Country list,China /  / CP--
+country not in Country list,China / Anhwei / CPAN
+country not in Country list,China / Chekiang / CPCH
+country not in Country list,China / Fukien / CPFU
+country not in Country list,China / Hupei / CPHI
+country not in Country list,China / Heilungkiang / CPHK
+country not in Country list,China / Honan / CPHO
+country not in Country list,China / Hopei / CPHP
+country not in Country list,China / Hunan / CPHU
+country not in Country list,China / Inner Mongolia (AR) / CPIM
+country not in Country list,China / Kansu / CPKA
+country not in Country list,China / Kwangtung / CPKG
+country not in Country list,China / Kiangsi / CPKI
+country not in Country list,China / Kirin / CPKR
+country not in Country list,China / Kwangsi(Chuang AR) / CPKS
+country not in Country list,China / Kiangsu / CPKU
+country not in Country list,China / Kweichow / CPKW
+country not in Country list,China / Liaoning / CPLI
+country not in Country list,China / Ninghsia (Hui AR) / CPNH
+country not in Country list,China / Peking (Municipality) / CPPK
+country not in Country list,China / Shansi / CPSA
+country not in Country list,China / Shantung / CPSG
+country not in Country list,China / Shanghai (Municipality) / CPSH
+country not in Country list,China / Shensi / CPSI
+country not in Country list,China / Sinkiang (Uighur AR) / CPSK
+country not in Country list,China / Szechuan / CPSZ
+country not in Country list,China / Chinghai / CPTS
+country not in Country list,China / Tientsin (Municipality) / CPTT
+country not in Country list,China / Yunnan / CPYU
+country not in Country list,Colombia /  / SACA
+country not in Country list,Comoros /  / KM00
+country not in Country list,Congo /  / YY00
+country not in Country list,Costa Rica /  / CACA
+country not in Country list,Cuba /  / CJCA
+country not in Country list,Czechoslovakia / Banskobystricky Kraj / CS20
+country not in Country list,Czechoslovakia / Bratislavsky Kraj / CS21
+country not in Country list,Czechoslovakia / Ko?icky Kraj / CS24
+country not in Country list,Czechoslovakia / Nitriansky Kraj / CS25
+country not in Country list,Czechoslovakia / Pre?ovsky Kraj / CS28
+country not in Country list,Czechoslovakia / Zilinsky Kraj / CS29
+country not in Country list,Dahomey /  / XQ00
+country not in Country list,Democratic Republic of Congo /  / ZI00
+country not in Country list,Djibouti /  / EY00
+country not in Country list,Dominican Republic /  / LJDA
+country not in Country list,Ecuador /  / SAEA
+country not in Country list,Egypt /  / EG00
+country not in Country list,El Salvador /  / CAEA
+country not in Country list,Equatorial Guinea /  / YQ00
+country not in Country list,Eritrea /  / EV00
+country not in Country list,Ethiopia /  / EQ00
+country not in Country list,Falkland Islands /  / FK00
+country not in Country list,Fernando Poo /  / YH00
+country not in Country list,French Guiana /  / GF00
+country not in Country list,French Southern Territories /  / TF00
+country not in Country list,Gabon /  / QY00
+country not in Country list,Gaza Strip /  / GS00
+country not in Country list,Gaza Strip /  / GZ00
+country not in Country list,Georgia /  / GE--
+country not in Country list,Georgia / Adzharia / GE01
+country not in Country list,Georgia / Yuzhnaya Osetia / GE02
+country not in Country list,Georgia / Abkhaziya / GE03
+country not in Country list,Georgia /  / SU95
+country not in Country list,Ghana /  / GH00
+country not in Country list,Greenland /  / GD--
+country not in Country list,Greenland / Qasigiannquit / GD01
+country not in Country list,Greenland / Aasiaat / GD03
+country not in Country list,Greenland / Paamiut / GD05
+country not in Country list,Greenland / Qeqertarsuaq / GD07
+country not in Country list,Greenland / Nuuk / GD09
+country not in Country list,Greenland / Sisimiut / GD11
+country not in Country list,Greenland / Ivittuut / GD13
+country not in Country list,Greenland / Ilulissat / GD15
+country not in Country list,Greenland / Qaqortoq / GD17
+country not in Country list,Greenland / Kangaatsiaq / GD19
+country not in Country list,Greenland / Nanortalik / GD21
+country not in Country list,Greenland / Narsaq / GD23
+country not in Country list,Greenland / Maniitsoq / GD25
+country not in Country list,Greenland / Uummannaq / GD27
+country not in Country list,Greenland / Upernavik / GD29
+country not in Country list,Greenland / Avanersuq / GD41
+country not in Country list,Greenland / Tasiilaq / GD51
+country not in Country list,Greenland / Illoqqortoormiut / GD53
+country not in Country list,Greenland / Kommunegarfiit avataanni / GD61
+country not in Country list,Guatemala /  / CAGA
+country not in Country list,Guinea /  / GY00
+country not in Country list,Guinea Bissau /  / GQ00
+country not in Country list,Guinea Islands /  / HH00
+country not in Country list,Guyana /  / SAGA
+country not in Country list,Haiti /  / LJHA
+country not in Country list,Honduras /  / CAHA
+country not in Country list,Hong Kong /  / CG00
+country not in Country list,India /  / IN--
+country not in Country list,India / Andhra Pradesh / INAP
+country not in Country list,India / Assam / INAS
+country not in Country list,India / Bihar / INBI
+country not in Country list,India / Maharashtra / INBO
+country not in Country list,India / Delhi / INDE
+country not in Country list,India / Himachal Pradesh / INHP
+country not in Country list,India / Jammu and Kashmir / INJK
+country not in Country list,India / Kerala / INKE
+country not in Country list,India / Madhya Pradesh / INMP
+country not in Country list,India / Manipur / INMR
+country not in Country list,India / Tamil Nadu / INMS
+country not in Country list,India / Karnataka / INMY
+country not in Country list,India / Orissa / INOR
+country not in Country list,India / Pondicherry / INPO
+country not in Country list,India / Punjab / INPU
+country not in Country list,India / Rajasthan / INRA
+country not in Country list,India / Tripura / INTR
+country not in Country list,India / Uttar Pradesh / INUP
+country not in Country list,India / West Bengal / INWB
+country not in Country list,Indian Ocean islands /  / +J00
+country not in Country list,Indonesia /  / ON00
+country not in Country list,Iran /  / IP00
+country not in Country list,Iraq /  / IQ00
+country not in Country list,Islands in other oceans /  / +I00
+country not in Country list,Israel /  / IL00
+country not in Country list,Jamaica /  / CJJA
+country not in Country list,Japan /  / JH00
+country not in Country list,Jordan /  / JO00
+country not in Country list,Kazakhstan /  / KZ--
+country not in Country list,Kazakhstan / Aktyubinsk O. / KZ00
+country not in Country list,Kazakhstan / Alma-Ata O. / KZ01
+country not in Country list,Kazakhstan / Chimkent O. / KZ03
+country not in Country list,Kazakhstan / Dzhambul O. / KZ04
+country not in Country list,Kazakhstan / Gur'yev O. / KZ06
+country not in Country list,Kazakhstan / Karaganda O. / KZ07
+country not in Country list,Kazakhstan / Turgaisk O. / KZ09
+country not in Country list,Kazakhstan / Kzyl-Orda O. / KZ10
+country not in Country list,Kazakhstan / Pavlodar O. / KZ11
+country not in Country list,Kazakhstan / Severo-Kazakhstan O. / KZ12
+country not in Country list,Kazakhstan / Semipalatinsk O. / KZ13
+country not in Country list,Kazakhstan / Taldy-Kurgan O. / KZ14
+country not in Country list,Kazakhstan / Akmolinsk O. / KZ15
+country not in Country list,Kazakhstan / Ural'sk O. / KZ16
+country not in Country list,Kazakhstan / Vostochno-Kazakhstan O. / KZ17
+country not in Country list,Kazakhstan /  / SI0-
+country not in Country list,Kazakhstan / Aktyubinsk O. / SI00
+country not in Country list,Kazakhstan / Alma-Ata O. / SI01
+country not in Country list,Kazakhstan / Chimkent O. / SI03
+country not in Country list,Kazakhstan / Dzhambul O. / SI04
+country not in Country list,Kazakhstan / Gur'yev O. / SI06
+country not in Country list,Kazakhstan / Karaganda O. / SI07
+country not in Country list,Kazakhstan / Turgaisk O. / SI09
+country not in Country list,Kazakhstan / Kzyl-Orda O. / SI10
+country not in Country list,Kazakhstan / Pavlodar O. / SI11
+country not in Country list,Kazakhstan / Severo-Kazakhstan O. / SI12
+country not in Country list,Kazakhstan / Semipalatinsk O. / SI13
+country not in Country list,Kazakhstan / Taldy-Kurgan O. / SI14
+country not in Country list,Kazakhstan / Akmolinsk O. / SI15
+country not in Country list,Kazakhstan / Ural'sk O. / SI16
+country not in Country list,Kazakhstan / Vostochno-Kazakhstan O. / SI17
+country not in Country list,Kenya /  / GP00
+country not in Country list,Kuwait /  / JI00
+country not in Country list,Kyrgyzstan /  / KI--
+country not in Country list,Kyrgyzstan / Issyk-Kul'O. Przhevalsk / KI01
+country not in Country list,Kyrgyzstan / Naryn O. / KI02
+country not in Country list,Kyrgyzstan / Talas O. / KI03
+country not in Country list,Kyrgyzstan /  / SI53
+country not in Country list,Laos /  / FNLA
+country not in Country list,Lebanon /  / LE00
+country not in Country list,Lesotho /  / FG00
+country not in Country list,Lesser Antilles /  / LA00
+country not in Country list,Liberia /  / PQ00
+country not in Country list,Libya /  / LT00
+country not in Country list,Madagascar /  / MG00
+country not in Country list,Malawi /  / MY00
+country not in Country list,Malaysia /  / FVMA
+country not in Country list,Maldives /  / MV00
+country not in Country list,Mali /  / EM00
+country not in Country list,Mauritania /  / NM00
+country not in Country list,Mauritania / Hodh ech Chargui / NM01
+country not in Country list,Mauritania / Hodh el Gharbi / NM02
+country not in Country list,Mauritania / Assaba / NM03
+country not in Country list,Mauritania / Gorgol / NM04
+country not in Country list,Mauritania / Brakna / NM05
+country not in Country list,Mauritania / Trarza / NM06
+country not in Country list,Mauritania / Adrar / NM07
+country not in Country list,Mauritania / Dakhlet Nou?dhibou / NM08
+country not in Country list,Mauritania / Tagant / NM09
+country not in Country list,Mauritania / Guidimaka / NM10
+country not in Country list,Mauritania / Tiris Zemmour / NM11
+country not in Country list,Mauritania / Inchiri / NM12
+country not in Country list,Mauritania / Nouakchott / NMNK
+country not in Country list,Mauritius /  / MU00
+country not in Country list,Mayotte /  / YT00
+country not in Country list,Melilla /  / MJ00
+country not in Country list,Mexico /  / TA00
+country not in Country list,Mongolia /  / MN00
+country not in Country list,Morocco /  / MA00
+country not in Country list,Morocco / Tanger-Tétouan / MA01
+country not in Country list,Morocco / Gharb-Chrarda-Beni Hssen / MA02
+country not in Country list,Morocco / Taza-Al Hoceima-Taounate / MA03
+country not in Country list,Morocco / L'Oriental / MA04
+country not in Country list,Morocco / Fès-Boulemane / MA05
+country not in Country list,Morocco / Meknès-Tafilalet / MA06
+country not in Country list,Morocco / Rabat-Salé-Zemmour-Zaer / MA07
+country not in Country list,Morocco / Grand Casablanca / MA08
+country not in Country list,Morocco / Chaouia-Ouardigha / MA09
+country not in Country list,Morocco / Doukhala-Abda / MA10
+country not in Country list,Morocco / Marrakech-Tensift-Al Haouz / MA11
+country not in Country list,Morocco / Tadla-Azilal / MA12
+country not in Country list,Morocco / Souss-Massa-Drâa / MA13
+country not in Country list,Morocco / Guelmim-Es Smara / MA14
+country not in Country list,Morocco / Laâyoune-Boujdour-Sakia el Hamra / MA15
+country not in Country list,Morocco / Oued ed Dahab-Lagouira / MA16
+country not in Country list,Morocco / Tanger-Tétouan-aL Hoceïma / MATT
+country not in Country list,Morocco / L'Oriental / MALO
+country not in Country list,Morocco / Féz-Meknès / MAFM
+country not in Country list,Morocco / Rabat-Salé-Kénitra / MARS
+country not in Country list,Morocco / Béni Mellal-Khénifra / MABM
+country not in Country list,Morocco / Casablanca-Settat / MACS
+country not in Country list,Morocco / Marrakech-Safi / MAMS
+country not in Country list,Morocco / Drâa-Tafilalet / MADT
+country not in Country list,Morocco / Souss-Massa / MASM
+country not in Country list,Morocco / Guelmim-Oued Noun / MAGO
+country not in Country list,Morocco / Laâyoune-Sakia El Hamra / MALS
+country not in Country list,Morocco / Dakhla-Oued Ed-Dahab / MADO
+country not in Country list,Mozambique /  / MQ00
+country not in Country list,Myanmar /  / FE00
+country not in Country list,Namibia /  / FM00
+country not in Country list,Nepal /  / HJ00
+country not in Country list,New Caledonia /  / NC00
+country not in Country list,New Guinea /  / WE00
+country not in Country list,New Zealand /  / AJ--
+country not in Country list,New Zealand / North Island / AJNI
+country not in Country list,New Zealand / South Island / AJSI
+country not in Country list,Nicaragua /  / CANA
+country not in Country list,Niger /  / NE00
+country not in Country list,Nigeria /  / NV00
+country not in Country list,North Atlantic Ocean islands /  / +H00
+country not in Country list,North Korea /  / TP00
+country not in Country list,Oman /  / OM00
+country not in Country list,Pacific Islands /  / PI00
+country not in Country list,Pakistan /  / PN00
+country not in Country list,Palestine / Gaza Strip / PSGZ
+country not in Country list,Palestine / West Bank / PSWB
+country not in Country list,Panama /  / CAPA
+country not in Country list,Paraguay /  / SAPA
+country not in Country list,Peru /  / KJ00
+country not in Country list,Philippines /  / OE00
+country not in Country list,Puerto Rico /  / LJPA
+country not in Country list,Reunion /  / RE00
+country not in Country list,Rwanda /  / PP00
+country not in Country list,Saudi Arabia /  / AR00
+country not in Country list,Senegal /  / NU00
+country not in Country list,Seychelles /  / SC00
+country not in Country list,Sierra Leone /  / PH00
+country not in Country list,Sikkim /  / QJ00
+country not in Country list,Singapore /  / FVSA
+country not in Country list,Somalia /  / YS00
+country not in Country list,South Africa /  / FP--
+country not in Country list,South Africa / Western Cape (Cape Province) / FPCG
+country not in Country list,South Africa / Kwazulu-Natal / FPNA
+country not in Country list,South Africa / Free State (Orange Free State) / FPOF
+country not in Country list,South Africa / Northern Mpumalanga (Transvaal) / FPTV
+country not in Country list,South Korea /  / TX00
+country not in Country list,Soviet Union / USSR Asiatic part / SI--
+country not in Country list,Soviet Union / Altay / SI02
+country not in Country list,Soviet Union / Gorno-Altaysk / SI05
+country not in Country list,Soviet Union / Chelyabinsk O. / SI20
+country not in Country list,Soviet Union / Kemerovo O. / SI21
+country not in Country list,Soviet Union / Khanty-Mansi A.O. / SI22
+country not in Country list,Soviet Union / Kurgan O. / SI23
+country not in Country list,Soviet Union / Novosibirsk O. / SI24
+country not in Country list,Soviet Union / Omsk O. / SI25
+country not in Country list,Soviet Union / Sverdlovsk O. / SI26
+country not in Country list,Soviet Union / Tomsk O. / SI27
+country not in Country list,Soviet Union / Tyumen' O. / SI28
+country not in Country list,Soviet Union / Yamal-Nenets A.O. / SI29
+country not in Country list,Soviet Union / Evenkiy A.O. / SI30
+country not in Country list,Soviet Union / Irkutsk O. / SI31
+country not in Country list,Soviet Union / Khakassia / SI32
+country not in Country list,Soviet Union / Krasnoyarsk / SI33
+country not in Country list,Soviet Union /  / SI34
+country not in Country list,Soviet Union / Severnaya Zemlya Islands / SI35
+country not in Country list,Soviet Union / Taymyr A.O. / SI36
+country not in Country list,Soviet Union / Tuva / SI37
+country not in Country list,Soviet Union / Yakut (east) / SI38
+country not in Country list,Soviet Union / Yakut (west) / SI39
+country not in Country list,Soviet Union / Blagoveshchensk / SI40
+country not in Country list,Soviet Union / Buryatia / SI41
+country not in Country list,Soviet Union / Chita O. / SI42
+country not in Country list,Soviet Union / Chukotka / SI43
+country not in Country list,Soviet Union / Kamchatka O. / SI44
+country not in Country list,Soviet Union / Khabarovsk / SI45
+country not in Country list,Soviet Union / Kuril Islands / SI46
+country not in Country list,Soviet Union / Magadan O. / SI47
+country not in Country list,Soviet Union / Sakhalin O. / SI48
+country not in Country list,Soviet Union / Primorskiy / SI49
+country not in Country list,Soviet Union / Kara-Kalpak / SI52
+country not in Country list,Soviet Union / Uzbekistan / SI57
+country not in Country list,Soviet Union / USSR European part / SU--
+country not in Country list,Soviet Union / Kaliningrad O. / SU01
+country not in Country list,Soviet Union / Leningrad O. / SU03
+country not in Country list,Soviet Union / Novgorod O. / SU05
+country not in Country list,Soviet Union / Pskov O. / SU06
+country not in Country list,Soviet Union / Arkhangelsk O. / SU10
+country not in Country list,Soviet Union / Franz Josef Land / SU11
+country not in Country list,Soviet Union / Karelia / SU12
+country not in Country list,Soviet Union / Komi / SU13
+country not in Country list,Soviet Union / Murmansk O. / SU14
+country not in Country list,Soviet Union / Nenets A.O. / SU15
+country not in Country list,Soviet Union / Novaya Zemlya / SU16
+country not in Country list,Soviet Union /  / SU17
+country not in Country list,Soviet Union / Bryansk O. / SU21
+country not in Country list,Soviet Union / Kaluga O. / SU24
+country not in Country list,Soviet Union / Smolensk O. / SU27
+country not in Country list,Soviet Union / Gorkiy O. / SU30
+country not in Country list,Soviet Union / Ivanovo O. / SU31
+country not in Country list,Soviet Union / Kalinin O. / SU32
+country not in Country list,Soviet Union / Kostroma O. / SU33
+country not in Country list,Soviet Union / Mordovia O. / SU34
+country not in Country list,Soviet Union / Moscow O. / SU35
+country not in Country list,Soviet Union / Ryazan' O. / SU36
+country not in Country list,Soviet Union / Tula O. / SU37
+country not in Country list,Soviet Union / Vladimir O. / SU38
+country not in Country list,Soviet Union /  / SU39
+country not in Country list,Soviet Union / Bashkiria / SU40
+country not in Country list,Soviet Union / Chuvashia / SU41
+country not in Country list,Soviet Union / Kirov O. / SU42
+country not in Country list,Soviet Union / Kuybyshev O. / SU43
+country not in Country list,Soviet Union / Mariy El / SU44
+country not in Country list,Soviet Union / Orenburg O. / SU45
+country not in Country list,Soviet Union / Perm' O. / SU46
+country not in Country list,Soviet Union / Tataria / SU47
+country not in Country list,Soviet Union / Udmurtia / SU48
+country not in Country list,Soviet Union / Ul'yanovsk O. / SU49
+country not in Country list,Soviet Union / Ukraine / SU5-
+country not in Country list,Soviet Union / Cherkassy O. / SU50
+country not in Country list,Soviet Union / Chernigiv O. / SU51
+country not in Country list,Soviet Union / Chernivtsy O. / SU52
+country not in Country list,Soviet Union / Dnipropetrovsk O. / SU53
+country not in Country list,Soviet Union / Donetsk O. / SU54
+country not in Country list,Soviet Union / Kharkiv O. / SU55
+country not in Country list,Soviet Union / Kherson O. / SU56
+country not in Country list,Soviet Union / Khmel'nitskiy O. / SU57
+country not in Country list,Soviet Union / Kirovograd O. / SU58
+country not in Country list,Soviet Union / Kyiv O. / SU59
+country not in Country list,Soviet Union / Krym / SU60
+country not in Country list,Soviet Union / Voroshilovgrad O. / SU61
+country not in Country list,Soviet Union / Lutsk / SU62
+country not in Country list,Soviet Union / Lviv O. / SU63
+country not in Country list,Soviet Union / Mikolayiv O. / SU65
+country not in Country list,Soviet Union / Odesa O. / SU66
+country not in Country list,Soviet Union / Poltava O. / SU67
+country not in Country list,Soviet Union / Rivne O. / SU68
+country not in Country list,Soviet Union / Ivano-Frankivsk O. / SU69
+country not in Country list,Soviet Union / Sumy O. / SU70
+country not in Country list,Soviet Union / Ternopil' O. / SU71
+country not in Country list,Soviet Union / Uzhgorod / SU72
+country not in Country list,Soviet Union / Vinnitsa O. / SU73
+country not in Country list,Soviet Union / Zaporizhzhya O. / SU74
+country not in Country list,Soviet Union / Zhitomir O. / SU75
+country not in Country list,Soviet Union / Belgorod O. / SU80
+country not in Country list,Soviet Union / Kursk O. / SU81
+country not in Country list,Soviet Union / Lipetsk O. / SU82
+country not in Country list,Soviet Union / Orel O. / SU83
+country not in Country list,Soviet Union / Penza O. / SU84
+country not in Country list,Soviet Union / Rostov O. / SU85
+country not in Country list,Soviet Union / Saratov O. / SU86
+country not in Country list,Soviet Union / Tambov O. / SU87
+country not in Country list,Soviet Union / Stalingrad O. / SU88
+country not in Country list,Soviet Union / Voronezh O. / SU89
+country not in Country list,Soviet Union / Astrakhan' O. / SU91
+country not in Country list,Soviet Union / Karachayevo-Cherkessia / SU93
+country not in Country list,Soviet Union / Kabardino-Balkaria / SU93
+country not in Country list,Soviet Union / Severnaya Osetia / SU93
+country not in Country list,Soviet Union / Checheno-Ingushetia / SU93
+country not in Country list,Soviet Union / Dagestan / SU94
+country not in Country list,Soviet Union / Kalmykia / SU96
+country not in Country list,Soviet Union / Krasnodar / SU97
+country not in Country list,Soviet Union / Stavropol' O. / SU98
+country not in Country list,Sri Lanka /  / ZE00
+country not in Country list,Sudan /  / SS00
+country not in Country list,Suqutr? /  / YB00
+country not in Country list,Suriname /  / SR00
+country not in Country list,Swaziland /  / WP00
+country not in Country list,Syria /  / SY00
+country not in Country list,Taiwan /  / CX00
+country not in Country list,Tajikistan / Leninabad / SI55
+country not in Country list,Tajikistan /  / TD--
+country not in Country list,Tajikistan / Gorno-Badakhshan / TD01
+country not in Country list,Tajikistan / Khatlon Oblast / TD02
+country not in Country list,Tajikistan / Dushanbe Oblast / TD03
+country not in Country list,Tajikistan / Sogdi Oblast / TD04
+country not in Country list,Tanzania /  / HT00
+country not in Country list,Thailand /  / FNTA
+country not in Country list,The Gambia /  / VM00
+country not in Country list,Tibet /  / HA00
+country not in Country list,Togo /  / XH00
+country not in Country list,Tunisia /  / TO00
+country not in Country list,Turkmenistan /  / TM--
+country not in Country list,Turkmenistan / Balkan Velayat / TM01
+country not in Country list,Turkmenistan / Dashogus Velayat / TM02
+country not in Country list,Turkmenistan / Akhal Velayat / TM03
+country not in Country list,Turkmenistan / Lebap Velayat / TM04
+country not in Country list,Turkmenistan / Mary Velayat / TM05
+country not in Country list,Uganda /  / GG00
+country not in Country list,United Arab Emirates /  / JR00
+country not in Country list,United States of America /  / NA--
+country not in Country list,United States of America / Arkansas / NAAK
+country not in Country list,United States of America / Alabama / NAAL
+country not in Country list,United States of America / Arizona / NAAZ
+country not in Country list,United States of America / California / NACA
+country not in Country list,United States of America / Colorado / NACL
+country not in Country list,United States of America / Connecticut / NACN
+country not in Country list,United States of America / District of Columbia / NADC
+country not in Country list,United States of America / Delaware / NADE
+country not in Country list,United States of America / Florida / NAFL
+country not in Country list,United States of America / Georgia / NAGE
+country not in Country list,United States of America / Idaho / NAID
+country not in Country list,United States of America / Illinois / NAIL
+country not in Country list,United States of America / Indiana / NAIN
+country not in Country list,United States of America / Iowa / NAIO
+country not in Country list,United States of America / Kansas / NAKA
+country not in Country list,United States of America / Kentucky / NAKE
+country not in Country list,United States of America / Louisiana / NALO
+country not in Country list,United States of America / Maine / NAMA
+country not in Country list,United States of America / Michigan / NAMC
+country not in Country list,United States of America / Minnesota / NAMN
+country not in Country list,United States of America / Montana / NAMO
+country not in Country list,United States of America / Mississippi / NAMP
+country not in Country list,United States of America / Missouri / NAMR
+country not in Country list,United States of America / Massachusetts / NAMS
+country not in Country list,United States of America / Maryland / NAMY
+country not in Country list,United States of America / Nebraska / NANA
+country not in Country list,United States of America / North Carolina / NANC
+country not in Country list,United States of America / North Dakota / NAND
+country not in Country list,United States of America / New Hampshire / NANH
+country not in Country list,United States of America / New Jersey / NANJ
+country not in Country list,United States of America / Nevada / NANV
+country not in Country list,United States of America / New York / NANY
+country not in Country list,United States of America / Ohio / NAOH
+country not in Country list,United States of America / Oklahoma / NAOK
+country not in Country list,United States of America / Oregon / NAOR
+country not in Country list,United States of America / Pennsylvania / NAPE
+country not in Country list,United States of America / Rhode Island / NARI
+country not in Country list,United States of America / South Carolina / NASC
+country not in Country list,United States of America / South Dakota / NASD
+country not in Country list,United States of America / Tennessee / NATN
+country not in Country list,United States of America / Texas / NATX
+country not in Country list,United States of America / Utah / NAUT
+country not in Country list,United States of America / Vermont / NAVE
+country not in Country list,United States of America / Virginia / NAVI
+country not in Country list,United States of America / Washington / NAWA
+country not in Country list,United States of America / Wisconsin / NAWI
+country not in Country list,United States of America / West Virginia / NAWV
+country not in Country list,United States of America / Wyoming / NAWY
+country not in Country list,United States of America / Alaska / VA00
+country not in Country list,Upper Volta /  / VU00
+country not in Country list,Uruguay /  / SAUA
+country not in Country list,Uzbekistan /  / UZ--
+country not in Country list,Uzbekistan / Andizhan O. / UZ01
+country not in Country list,Uzbekistan / Bukhara O. / UZ02
+country not in Country list,Uzbekistan / Dzhizak O. / UZ03
+country not in Country list,Uzbekistan / Fergana O. / UZ04
+country not in Country list,Uzbekistan / Kara-Kalpak / UZ05
+country not in Country list,Uzbekistan / Kashkadar'in O. / UZ06
+country not in Country list,Uzbekistan / Khorezm O. / UZ07
+country not in Country list,Uzbekistan / Namangan O. / UZ08
+country not in Country list,Uzbekistan / Navoi O. / UZ09
+country not in Country list,Uzbekistan / Samarkand O. / UZ10
+country not in Country list,Uzbekistan / Surkhandar'in O. / UZ11
+country not in Country list,Uzbekistan / Syrdar'in O. / UZ12
+country not in Country list,Uzbekistan / Tashkent O. / UZ13
+country not in Country list,Venezuela /  / SJ00
+country not in Country list,Vietnam /  / FNVA
+country not in Country list,Virgin Islands /  / VI00
+country not in Country list,Virgin Islands - American /  / VINA
+country not in Country list,Virgin Islands - British /  / VIGB
+country not in Country list,WestBank /  / WB00
+country not in Country list,Western Sahara /  / ND00
+country not in Country list,Yemen /  / JZ00
+country not in Country list,Yugoslavia /  / YU--
+country not in Country list,Yugoslavia / Crna-Gora / YU72
+country not in Country list,Yugoslavia / Kosovo-Metohija / YU74
+country not in Country list,Yugoslavia / Serbia / YU77
+country not in Country list,Yugoslavia / Vojvodina / YU78
+country not in Country list,Zambia /  / ZM00
+country not in Country list,Zanzibar & Pemba /  / QC00
+country not in Country list,Zimbabwe /  / WS00
+duplicate place_code dropped,"CZ10: Cesk? Budejovice (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ11: Hradec Kralove (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ12: Jihlava (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ13: Karlovy Vary (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ14: Liberec (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ15: Pardubice (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ16: Plzen (Pilsen) (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ17: Praha (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ18: Usti nad Labem (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ22: Brno (Br?nn) (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ23: Gottwaldov (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ26: Olomouc (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"CZ27: Ostrava (pre-2001, , , , , , , , )"
+duplicate place_code dropped,"ES07: Santander (now named Cantabria, , , , , , , , )"

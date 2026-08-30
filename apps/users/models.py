@@ -1,8 +1,8 @@
-"""Custom User model using email as the unique identifier."""
-
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+
+from apps.core.models import Script
 
 
 class UserManager(BaseUserManager):
@@ -41,6 +41,17 @@ class User(AbstractUser):
     """
 
     username = None
+
+    created = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_("created at"),
+        help_text=_("The date and time when this account was created."),
+    )
+    modified = models.DateTimeField(
+        auto_now=True,
+        verbose_name=_("updated at"),
+        help_text=_("The date and time when this account was last updated."),
+    )
     email = models.EmailField(
         unique=True,
         verbose_name=_("email address"),
@@ -52,15 +63,26 @@ class User(AbstractUser):
         verbose_name=_("language"),
         help_text=_("The language code used to display the user interface."),
     )
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name=_("created at"),
-        help_text=_("The date and time when this account was created."),
+    script = models.CharField(
+        max_length=4,
+        choices=[("", _("Automatic (based on language)"))] + Script.choices,
+        blank=True,
+        default="",
+        verbose_name=_("script"),
+        help_text=_(
+            "The preferred script for displaying place names, e.g. Latin or "
+            "Cyrillic for a Serbian user. Leave as automatic to use the "
+            "default for the selected language."
+        ),
     )
-    updated_at = models.DateTimeField(
-        auto_now=True,
-        verbose_name=_("updated at"),
-        help_text=_("The date and time when this account was last updated."),
+    observer = models.OneToOneField(
+        "core.Observer",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="user",
+        verbose_name=_("observer"),
+        help_text=_("The observer associated with this user."),
     )
 
     USERNAME_FIELD = "email"

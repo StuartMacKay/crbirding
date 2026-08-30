@@ -1,29 +1,26 @@
-import json
-
 from django import forms
 from django.conf import settings
 from django.utils.translation import gettext_lazy as _
 
 
-class TranslationTextInput(forms.MultiWidget):
-    template_name = "core/widgets/translation_field.html"
+class ScriptTextInput(forms.MultiWidget):
+    template_name = "core/widgets/script_field.html"
 
     def __init__(self, *args, **kwargs):
         widgets = [
             forms.TextInput(attrs={"locale": _(language), "class": "vTextField"})
-            for code, language in settings.LANGUAGES
+            for code, language in settings.SCRIPTS
         ]
         super().__init__(widgets, **kwargs)
 
     def decompress(self, value):
         if value:
-            data = json.loads(value)
-            return [data.get(code, "") for code, language in settings.LANGUAGES]
+            return [value.get(code, "") for code, language in settings.SCRIPTS]
         return []
 
 
-class TranslationTextarea(forms.MultiWidget):
-    template_name = "core/widgets/translation_field.html"
+class ScriptTextarea(forms.MultiWidget):
+    template_name = "core/widgets/script_field.html"
 
     def __init__(self, *args, **kwargs):
         if "widgets" not in kwargs:
@@ -35,12 +32,11 @@ class TranslationTextarea(forms.MultiWidget):
                         "class": "vLargeTextField",
                     }
                 )
-                for code, language in settings.LANGUAGES
+                for code, language in settings.SCRIPTS
             ]
         super().__init__(**kwargs)
 
     def decompress(self, value):
         if value:
-            data = json.loads(value)
-            return [data.get(code, "") for code, language in settings.LANGUAGES]
+            return [value.get(code, "") for code, language in settings.SCRIPTS]
         return []

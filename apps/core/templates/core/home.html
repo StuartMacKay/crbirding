@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <div class="max-w-3xl mx-auto px-4 py-8">
+    <h1 class="text-2xl font-bold text-gray-900">{{ project_name }}</h1>
+    <p class="mt-1 text-sm text-gray-600">{{ project_description }}</p>
+
+    <h2 class="mt-8 text-lg font-semibold text-gray-900">Recent observations</h2>
+
+    <form method="get" class="mt-4 flex flex-wrap gap-3 items-end">
+      <div>
+        <label for="filter-species" class="block text-xs font-medium text-gray-700">Species</label>
+        <select name="species" id="filter-species"
+                class="mt-1 rounded-md border-gray-300 text-sm shadow-sm focus:border-brand-500 focus:ring-brand-500">
+          <option value="">All species</option>
+          {% for species in species_options %}
+            <option value="{{ species.pk }}"
+                    {% if selected_species == species.pk|stringformat:"s" %}selected{% endif %}>{{ species.get_common_name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="filter-place"
+               class="block text-xs font-medium text-gray-700">Place</label>
+        <select name="place" id="filter-place"
+                class="mt-1 rounded-md border-gray-300 text-sm shadow-sm focus:border-brand-500 focus:ring-brand-500">
+          <option value="">All places</option>
+          {% for location in place_options %}
+            <option value="{{ location.pk }}"
+                    {% if selected_place == location.pk|stringformat:"s" %}selected{% endif %}>{{ location.get_name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="filter-country" class="block text-xs font-medium text-gray-700">Country</label>
+        <select name="country" id="filter-country"
+                class="mt-1 rounded-md border-gray-300 text-sm shadow-sm focus:border-brand-500 focus:ring-brand-500">
+          <option value="">All countries</option>
+          {% for code, label in country_options %}
+            <option value="{{ code }}"
+                    {% if selected_country == code %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <button type="submit"
+              class="bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium px-4 py-2 rounded-md transition-colors">
+        Filter
+      </button>
+      {% if selected_species or selected_place or selected_country %}
+        <a href="{% url 'core:home' %}" class="text-sm text-gray-500 hover:underline">Clear
+          filters</a>
+      {% endif %}
+    </form>
+
+    {% if resightings %}
+      <ul class="mt-4 space-y-4">
+        {% for resighting in resightings %}
+          {% with journey=resighting.journey %}
+            <li
+              class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden flex">
+              {% if journey.photo_url %}
+                <img src="{{ journey.photo_url }}" alt=""
+                     class="w-28 h-28 sm:w-32 sm:h-32 object-cover shrink-0">
+              {% endif %}
+              <div class="p-4 flex-1 min-w-0">
+                <h3 class="font-semibold text-gray-900">
+                  {{ journey.species_common_name }}
+                  <span
+                    class="italic text-gray-500 font-normal text-sm">({{ journey.scientific_name }})</span>
+                </h3>
+
+                {% if journey.ringed_place %}
+                  <p class="mt-2 text-sm text-gray-700">
+                    <span class="font-medium text-brand-700">Ringed</span>
+                    in {{ journey.ringed_place }}, {{ journey.ringed_country }}
+                    <span class="mx-1 text-gray-400">&rarr;</span>
+                    <span class="font-medium text-brand-700">Seen</span>
+                    in {{ journey.observed_place }}, {{ journey.observed_country }}
+                  </p>
+                  {% if journey.distance_km %}
+                    <p class="mt-1">
+                      <span
+                        class="text-2xl font-bold text-brand-600">{{ journey.distance_km|floatformat:0 }}</span>
+                      <span
+                        class="text-sm text-gray-500">km from where it was ringed</span>
+                    </p>
+                  {% endif %}
+                {% else %}
+                  <p class="mt-2 text-sm text-gray-700">Seen
+                    in {{ journey.observed_place }}, {{ journey.observed_country }}</p>
+                  <p class="mt-1 text-xs text-gray-400 italic">Ringing origin not yet
+                    identified</p>
+                {% endif %}
+
+                <p
+                  class="mt-2 text-xs text-gray-400">{{ journey.date|date:"d M Y" }}</p>
+              </div>
+            </li>
+          {% endwith %}
+        {% endfor %}
+      </ul>
+
+      {% if is_paginated %}
+        <nav class="mt-6 flex items-center justify-between text-sm">
+          <div>
+            {% if page_obj.has_previous %}
+              <a href="?
+                {% if querystring %}{{ querystring }}&{% endif %}page={{ page_obj.previous_page_number }}"
+                 class="text-brand-700 hover:underline">&larr; Previous</a>
+            {% endif %}
+          </div>
+          <span
+            class="text-gray-500">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+          <div>
+            {% if page_obj.has_next %}
+              <a href="?
+                {% if querystring %}{{ querystring }}&{% endif %}page={{ page_obj.next_page_number }}"
+                 class="text-brand-700 hover:underline">Next &rarr;</a>
+            {% endif %}
+          </div>
+        </nav>
+      {% endif %}
+
+    {% else %}
+      <p class="mt-4 text-sm text-gray-500">
+        {% if selected_species or selected_place or selected_country %}
+          No observations match these filters.
+        {% else %}
+          No observations have been recorded yet.
+        {% endif %}
+      </p>
+    {% endif %}
+  </div>
+{% endblock %}

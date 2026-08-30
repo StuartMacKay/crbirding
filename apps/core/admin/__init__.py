@@ -1,15 +1,25 @@
 """Core admin."""
 
-from .bird import BirdAdmin
+from .capture import CaptureAdmin
+from .country import CountryAdmin
 from .location import LocationAdmin
-from .observation import ObservationAdmin
+from .observer import ObserverAdmin
+from .place import PlaceAdmin
 from .project import ProjectAdmin
+from .resighting import ResightingAdmin
+from .rule import RuleAdmin
 from .species import SpeciesAdmin
+from .tag import TagAdmin
 
 __all__ = [
-    "BirdAdmin",
+    "CaptureAdmin",
+    "CountryAdmin",
     "LocationAdmin",
-    "ObservationAdmin",
+    "ObserverAdmin",
+    "PlaceAdmin",
     "ProjectAdmin",
+    "ResightingAdmin",
+    "RuleAdmin",
     "SpeciesAdmin",
+    "TagAdmin",
 ]

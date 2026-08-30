@@ -1,13 +1,16 @@
-"""Tag colours - the background colour, or the colour of the code."""
-
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
 class Colour(models.TextChoices):
-    NONE = "", _("None")
+    """Colours used for colour marks.
+
+    Metal (rings) are also included in the set of colours, allowing all
+    the markers on a bird to be recorded (encoded).
+
+    """
     RED = "R", _("Red")
-    PALE_BLUE = "P", _("Pale Blue")
+    LIGHT_BLUE = "P", _("Light Blue")
     WHITE = "W", _("White")
     ORANGE = "O", _("Orange")
     DARK_GREEN= "G", _("Dark Green")
@@ -15,7 +18,7 @@ class Colour(models.TextChoices):
     LIGHT_GREEN = "L", _("Light Green (Lime)")
     LIGHT_PINK = "K", _("Light Pink")
     BLACK = "N", _("Black (Niger)")
-    DARK_BLUE = "B", _("Blue (Dark)")
+    DARK_BLUE = "B", _("Dark Blue")
     METAL = "M", _("Metal Ring")
     VIOLET = "V", _("Violet/Mauve/Purple")
     YELLOW = "Y", _("Yellow")

@@ -11,6 +11,9 @@ app_name = "core"
 
 urlpatterns = [
     path("", views.HomeView.as_view(), name="home"),
+    path("resightings/new/", views.SubmitResightingView.as_view(), name="resighting-submit"),
+    path("captures/new/", views.SubmitCaptureView.as_view(), name="capture-submit"),
+    path("tags/add-row/", views.AddTagRowView.as_view(), name="add-tag-row"),
 ]
 
 # Development-only URL patterns for testing error pages and Sentry

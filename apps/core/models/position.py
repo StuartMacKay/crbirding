@@ -1,11 +1,9 @@
-"""The position of a tag on the bird."""
-
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
 class Position(models.TextChoices):
-    NONE = "", _("None")
+    """The position of a tag on the bird."""
     LEFT_ABOVE = "LA", _("Left Above (tibia)")
     LEFT_BELOW = "LB", _("Left Below (tarsus)")
     LEFT_WING = "LW", _("Left Wing")

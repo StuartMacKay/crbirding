@@ -1,0 +1,800 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-30 10:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: admin/resighting.py:25
+msgid "origin"
+msgstr ""
+
+#: forms.py:105
+msgid "Describe at least one colour ring, flag, or other tag."
+msgstr ""
+
+#: models/age.py:14
+msgid "Age unknown"
+msgstr ""
+
+#: models/age.py:15
+msgid "Pullus"
+msgstr ""
+
+#: models/age.py:16
+msgid "Full-grown"
+msgstr ""
+
+#: models/age.py:17
+msgid "1st calendar-year"
+msgstr ""
+
+#: models/age.py:18
+msgid "After 1st calendar-year"
+msgstr ""
+
+#: models/age.py:19
+msgid "2nd calendar-year"
+msgstr ""
+
+#: models/age.py:20
+msgid "After 2nd calendar-year"
+msgstr ""
+
+#: models/age.py:21
+msgid "3rd calendar-year"
+msgstr ""
+
+#: models/age.py:22
+msgid "After 3rd calendar-year"
+msgstr ""
+
+#: models/age.py:23
+msgid "4th calendar-year"
+msgstr ""
+
+#: models/age.py:24
+msgid "After 4th calendar-year"
+msgstr ""
+
+#: models/capture.py:26
+msgid "Day"
+msgstr ""
+
+#: models/capture.py:27
+msgid "Month"
+msgstr ""
+
+#: models/capture.py:28
+msgid "Year"
+msgstr ""
+
+#: models/capture.py:32 models/country.py:19 models/location.py:67
+#: models/observer.py:15 models/place.py:26 models/project.py:10
+#: models/resighting.py:15 models/rule.py:28 models/species.py:23
+#: models/tag.py:39
+msgid "created"
+msgstr ""
+
+#: models/capture.py:33 models/country.py:20 models/location.py:68
+#: models/observer.py:16 models/place.py:27 models/project.py:11
+#: models/resighting.py:16 models/rule.py:29 models/species.py:24
+#: models/tag.py:40
+msgid "When was the record created."
+msgstr ""
+
+#: models/capture.py:37 models/country.py:24 models/project.py:15
+#: models/resighting.py:20 models/species.py:28
+msgid "modified"
+msgstr ""
+
+#: models/capture.py:38 models/country.py:25 models/location.py:73
+#: models/observer.py:21 models/place.py:32 models/project.py:16
+#: models/resighting.py:21 models/rule.py:34 models/species.py:29
+#: models/tag.py:45
+msgid "When was the record last updated."
+msgstr ""
+
+#: models/capture.py:44 models/resighting.py:33 models/rule.py:40
+#: models/species.py:43 models/species.py:44 models/species.py:77
+msgid "species"
+msgstr ""
+
+#: models/capture.py:45
+msgid "The species recorded at the time of capture."
+msgstr ""
+
+#: models/capture.py:50
+msgid "age"
+msgstr ""
+
+#: models/capture.py:51
+msgid "The age of the bird when it was marked, using the EURING age code."
+msgstr ""
+
+#: models/capture.py:56
+msgid "sex"
+msgstr ""
+
+#: models/capture.py:57
+msgid "The sex of the bird, using the EURING sex code."
+msgstr ""
+
+#: models/capture.py:60 models/resighting.py:37
+msgid "date"
+msgstr ""
+
+#: models/capture.py:61
+msgid "The date the bird was marked."
+msgstr ""
+
+#: models/capture.py:66 models/resighting.py:43
+msgid "time"
+msgstr ""
+
+#: models/capture.py:67
+msgid "The time the bird was marked."
+msgstr ""
+
+#: models/capture.py:72
+msgid "resolution"
+msgstr ""
+
+#: models/capture.py:73
+msgid "The units the date is accurate to."
+msgstr ""
+
+#: models/capture.py:79 models/location.py:124 models/resighting.py:50
+msgid "location"
+msgstr ""
+
+#: models/capture.py:80
+msgid "The location where the bird was marked."
+msgstr ""
+
+#: models/capture.py:87 models/location.py:100 models/resighting.py:58
+msgid "latitude"
+msgstr ""
+
+#: models/capture.py:88 models/resighting.py:59
+msgid "The precise latitude of the bird, overriding the location coordinates."
+msgstr ""
+
+#: models/capture.py:95 models/location.py:106 models/resighting.py:66
+msgid "longitude"
+msgstr ""
+
+#: models/capture.py:96 models/resighting.py:67
+msgid "The precise longitude of the bird, overriding the location coordinates."
+msgstr ""
+
+#: models/capture.py:101 models/location.py:112 models/resighting.py:72
+msgid "accuracy"
+msgstr ""
+
+#: models/capture.py:103 models/location.py:114 models/resighting.py:74
+msgid ""
+"The estimated distance in metres, from the coordinates, to the actual "
+"position of the bird."
+msgstr ""
+
+#: models/capture.py:111 models/project.py:51 models/rule.py:55
+msgid "project"
+msgstr ""
+
+#: models/capture.py:112
+msgid "The project that tagged this bird."
+msgstr ""
+
+#: models/capture.py:116
+msgid "comments"
+msgstr ""
+
+#: models/capture.py:117
+msgid "Any additional notes about the bird."
+msgstr ""
+
+#: models/capture.py:121 models/resighting.py:105 models/tag.py:53
+msgid "capture"
+msgstr ""
+
+#: models/capture.py:122
+msgid "captures"
+msgstr ""
+
+#: models/colour.py:12
+msgid "Red"
+msgstr ""
+
+#: models/colour.py:13
+msgid "Light Blue"
+msgstr ""
+
+#: models/colour.py:14
+msgid "White"
+msgstr ""
+
+#: models/colour.py:15
+msgid "Orange"
+msgstr ""
+
+#: models/colour.py:16
+msgid "Dark Green"
+msgstr ""
+
+#: models/colour.py:17
+msgid "Dark Pink (Carmine)"
+msgstr ""
+
+#: models/colour.py:18
+msgid "Light Green (Lime)"
+msgstr ""
+
+#: models/colour.py:19
+msgid "Light Pink"
+msgstr ""
+
+#: models/colour.py:20
+msgid "Black (Niger)"
+msgstr ""
+
+#: models/colour.py:21
+msgid "Dark Blue"
+msgstr ""
+
+#: models/colour.py:22
+msgid "Metal Ring"
+msgstr ""
+
+#: models/colour.py:23
+msgid "Violet/Mauve/Purple"
+msgstr ""
+
+#: models/colour.py:24
+msgid "Yellow"
+msgstr ""
+
+#: models/colour.py:25
+msgid "Silver/Grey"
+msgstr ""
+
+#: models/colour.py:26
+msgid "Other metal ring"
+msgstr ""
+
+#: models/colour.py:27
+msgid "Brown (Umber)"
+msgstr ""
+
+#: models/colour.py:28
+msgid "Turquoise"
+msgstr ""
+
+#: models/country.py:30 models/place.py:55 models/species.py:34
+msgid "code"
+msgstr ""
+
+#: models/country.py:32
+msgid ""
+"The ISO 3166-1 alpha-3 code, or a user-assigned alpha-3 code for a non-ISO "
+"entity such as an area at sea."
+msgstr ""
+
+#: models/country.py:37 models/location.py:78 models/observer.py:10
+#: models/place.py:47
+msgid "name"
+msgstr ""
+
+#: models/country.py:38
+msgid "The name of the country or area."
+msgstr ""
+
+#: models/country.py:42 models/place.py:62 models/project.py:27
+msgid "country"
+msgstr ""
+
+#: models/country.py:43
+msgid "countries"
+msgstr ""
+
+#: models/direction.py:23
+msgid "Downward"
+msgstr ""
+
+#: models/direction.py:24
+msgid "Horizontal"
+msgstr ""
+
+#: models/direction.py:25
+msgid "Upward"
+msgstr ""
+
+#: models/location.py:72 models/observer.py:20 models/place.py:31
+#: models/rule.py:33 models/tag.py:44
+msgid "updated"
+msgstr ""
+
+#: models/location.py:80
+msgid ""
+"The name of the Location, keyed by script, e.g. {\"Latn\": \"Sofia\", "
+"\"Cyrl\": \"София\"}."
+msgstr ""
+
+#: models/location.py:86
+msgid ""
+"Label is used to distinguish between sub-sites, which share the name, but "
+"have different coordinates."
+msgstr ""
+
+#: models/location.py:94 models/place.py:67
+msgid "place"
+msgstr ""
+
+#: models/location.py:95
+msgid "The region, and country, for the Location."
+msgstr ""
+
+#: models/location.py:101
+msgid "The latitude of this location in decimal degrees."
+msgstr ""
+
+#: models/location.py:107
+msgid "The longitude of this location in decimal degrees."
+msgstr ""
+
+#: models/location.py:120
+msgid "The description of the Location."
+msgstr ""
+
+#: models/location.py:125
+msgid "locations"
+msgstr ""
+
+#: models/observer.py:11
+msgid "The full name of the observer."
+msgstr ""
+
+#: models/observer.py:25 models/resighting.py:96
+msgid "observer"
+msgstr ""
+
+#: models/observer.py:26
+msgid "observers"
+msgstr ""
+
+#: models/place.py:37
+msgid "published"
+msgstr ""
+
+#: models/place.py:38
+msgid "When was the place last updated by Euring."
+msgstr ""
+
+#: models/place.py:41
+msgid "active"
+msgstr ""
+
+#: models/place.py:42
+msgid "Is the Place currently used."
+msgstr ""
+
+#: models/place.py:49
+msgid ""
+"The name of the Place, keyed by script, e.g. {\"Latn\": \"Sofia\", \"Cyrl\": "
+"\"София\"}."
+msgstr ""
+
+#: models/place.py:56
+msgid "The Euring Place code for a region."
+msgstr ""
+
+#: models/place.py:63
+msgid "The country, or other area, for the Place."
+msgstr ""
+
+#: models/place.py:68
+msgid "places"
+msgstr ""
+
+#: models/position.py:7
+msgid "Left Above (tibia)"
+msgstr ""
+
+#: models/position.py:8
+msgid "Left Below (tarsus)"
+msgstr ""
+
+#: models/position.py:9
+msgid "Left Wing"
+msgstr ""
+
+#: models/position.py:10
+msgid "Nasal Saddle"
+msgstr ""
+
+#: models/position.py:11
+msgid "Neck Collar"
+msgstr ""
+
+#: models/position.py:12
+msgid "Right Above (tibia)"
+msgstr ""
+
+#: models/position.py:13
+msgid "Right Below (tarsus)"
+msgstr ""
+
+#: models/position.py:14
+msgid "Right Wing"
+msgstr ""
+
+#: models/project.py:20
+msgid "description"
+msgstr ""
+
+#: models/project.py:21
+msgid "A description of the project."
+msgstr ""
+
+#: models/project.py:28
+msgid "The country where the project is based."
+msgstr ""
+
+#: models/project.py:31
+msgid "coordinator"
+msgstr ""
+
+#: models/project.py:32
+msgid "The name of the project coordinator."
+msgstr ""
+
+#: models/project.py:36
+msgid "contact"
+msgstr ""
+
+#: models/project.py:37
+msgid "The email address where observations should be sent."
+msgstr ""
+
+#: models/project.py:41
+msgid "submit"
+msgstr ""
+
+#: models/project.py:42
+msgid "The website where observations should be submitted."
+msgstr ""
+
+#: models/project.py:46
+msgid "website"
+msgstr ""
+
+#: models/project.py:47
+msgid "The website describing the project."
+msgstr ""
+
+#: models/project.py:52
+msgid "projects"
+msgstr ""
+
+#: models/resighting.py:26
+msgid "submitted"
+msgstr ""
+
+#: models/resighting.py:27
+msgid "When was the record submitted to the project coordinator."
+msgstr ""
+
+#: models/resighting.py:34
+msgid "The species observed."
+msgstr ""
+
+#: models/resighting.py:38
+msgid "The date the resighting was made."
+msgstr ""
+
+#: models/resighting.py:44
+msgid "The time the resighting was made."
+msgstr ""
+
+#: models/resighting.py:51
+msgid "The location where the resighting was made."
+msgstr ""
+
+#: models/resighting.py:81
+msgid "photo"
+msgstr ""
+
+#: models/resighting.py:83
+msgid ""
+"A photo of the bird at the time of the resighting. Used to verify that the "
+"tags were read correctly."
+msgstr ""
+
+#: models/resighting.py:89
+msgid "notes"
+msgstr ""
+
+#: models/resighting.py:90
+msgid "Any additional notes about the resighting."
+msgstr ""
+
+#: models/resighting.py:97
+msgid "The person who made this resighting."
+msgstr ""
+
+#: models/resighting.py:106
+msgid "The details of where the bird was marked."
+msgstr ""
+
+#: models/resighting.py:110 models/tag.py:62
+msgid "resighting"
+msgstr ""
+
+#: models/resighting.py:111
+msgid "resightings"
+msgstr ""
+
+#: models/rule.py:41
+msgid "The species of bird being marked by the project."
+msgstr ""
+
+#: models/rule.py:45 models/tag.py:67
+msgid "position"
+msgstr ""
+
+#: models/rule.py:46
+msgid "The position of the colour mark on the bird."
+msgstr ""
+
+#: models/rule.py:49
+msgid "regex"
+msgstr ""
+
+#: models/rule.py:49
+msgid "A regular expression for matching colour marks."
+msgstr ""
+
+#: models/rule.py:56
+msgid "The project that marked the bird."
+msgstr ""
+
+#: models/rule.py:60
+msgid "rule"
+msgstr ""
+
+#: models/rule.py:61
+msgid "rules"
+msgstr ""
+
+#: models/script.py:8
+msgid "Arabic"
+msgstr ""
+
+#: models/script.py:9
+msgid "Armenian"
+msgstr ""
+
+#: models/script.py:10
+msgid "Cyrillic"
+msgstr ""
+
+#: models/script.py:11
+msgid "Georgian"
+msgstr ""
+
+#: models/script.py:12
+msgid "Greek"
+msgstr ""
+
+#: models/script.py:13
+msgid "Hebrew"
+msgstr ""
+
+#: models/script.py:14
+msgid "Latin"
+msgstr ""
+
+#: models/sex.py:14
+msgid "Unknown"
+msgstr ""
+
+#: models/sex.py:15
+msgid "Male"
+msgstr ""
+
+#: models/sex.py:16
+msgid "Female"
+msgstr ""
+
+#: models/species.py:8
+msgid "The code must be the 5-digit EURING species code, e.g. '00020'."
+msgstr ""
+
+#: models/species.py:35
+msgid "The 5-digit EURING code used to uniquely identify this species."
+msgstr ""
+
+#: models/species.py:38
+msgid "scientific name"
+msgstr ""
+
+#: models/species.py:39
+msgid "The scientific (Latin) name for the species."
+msgstr ""
+
+#: models/species.py:78
+msgid "The species this name belongs to."
+msgstr ""
+
+#: models/species.py:82
+msgid "language"
+msgstr ""
+
+#: models/species.py:83
+msgid "The ISO 639-1 language code for this name, e.g. 'en' or 'pt-br'."
+msgstr ""
+
+#: models/species.py:86
+msgid "common name"
+msgstr ""
+
+#: models/species.py:87
+msgid "The common name for the species in this language."
+msgstr ""
+
+#: models/species.py:91
+msgid "species name"
+msgstr ""
+
+#: models/species.py:92
+msgid "species names"
+msgstr ""
+
+#: models/tag.py:54
+msgid ""
+"The Capture that the tag belongs to, if attached when the bird was marked."
+msgstr ""
+
+#: models/tag.py:63
+msgid "The Resighting that the tag belongs to, if read on a later sighting."
+msgstr ""
+
+#: models/tag.py:68
+msgid "The position of the tag on the bird."
+msgstr ""
+
+#: models/tag.py:72
+msgid "order"
+msgstr ""
+
+#: models/tag.py:73
+msgid "Stacking order (top to bottom) among tags sharing the same position."
+msgstr ""
+
+#: models/tag.py:78
+msgid "kind"
+msgstr ""
+
+#: models/tag.py:79
+msgid "The physical type of tag."
+msgstr ""
+
+#: models/tag.py:83
+msgid "colour"
+msgstr ""
+
+#: models/tag.py:84
+msgid "The colour of the tag."
+msgstr ""
+
+#: models/tag.py:89
+msgid "second colour"
+msgstr ""
+
+#: models/tag.py:90
+msgid "The second colour, for a two-colour striped ring."
+msgstr ""
+
+#: models/tag.py:94
+msgid "inscription"
+msgstr ""
+
+#: models/tag.py:95
+msgid "The engraved text on the tag, if any."
+msgstr ""
+
+#: models/tag.py:100
+msgid "inscription colour"
+msgstr ""
+
+#: models/tag.py:101
+msgid "The colour of the inscription, if different from the tag itself."
+msgstr ""
+
+#: models/tag.py:106
+msgid "inscription direction"
+msgstr ""
+
+#: models/tag.py:107
+msgid "The direction the inscription reads in, if it could be ambiguous."
+msgstr ""
+
+#: models/tag.py:111
+msgid "uncertain"
+msgstr ""
+
+#: models/tag.py:112
+msgid "Was some part of this tag not clearly seen or read?"
+msgstr ""
+
+#: models/tag.py:116
+msgid "tag"
+msgstr ""
+
+#: models/tag.py:117
+msgid "tags"
+msgstr ""
+
+#: models/tag_kind.py:11
+msgid "Ring"
+msgstr ""
+
+#: models/tag_kind.py:12
+msgid "Flag"
+msgstr ""
+
+#: models/tag_kind.py:13
+msgid "Nasal saddle"
+msgstr ""
+
+#: models/tag_kind.py:14
+msgid "Wing tag"
+msgstr ""
+
+#: models/tag_kind.py:15
+msgid "Neck collar"
+msgstr ""
+
+#: templates/admin/core/change_list_with_import.html:6
+msgid "Import from reference data"
+msgstr ""
+
+#: templates/admin/core/reference_import.html:5
+msgid "Back to list"
+msgstr ""
+
+#: templates/admin/core/reference_import.html:8
+msgid "Search by name or code"
+msgstr ""
+
+#: templates/admin/core/reference_import.html:9
+msgid "Search"
+msgstr ""
+
+#: templates/admin/core/reference_import.html:26
+msgid "Import"
+msgstr ""
+
+#: templates/admin/core/reference_import.html:34
+msgid "No matches."
+msgstr ""
+
+#: templates/admin/core/reference_import.html:38
+msgid "Bulk actions"
+msgstr ""
+
+#: templates/admin/core/reference_import.html:42
+msgid "Import everything from the reference file"
+msgstr ""

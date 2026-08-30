@@ -1,0 +1,52 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+  <p><a href="../">{% translate "Back to list" %}</a></p>
+
+  <form method="get">
+    <input type="text" name="q" value="{{ query }}" placeholder="{% translate 'Search by name or code' %}" autofocus>
+    <input type="submit" value="{% translate 'Search' %}">
+  </form>
+
+  {% if query %}
+    {% if matches %}
+      <table>
+        <tbody>
+          {% for code, label, detail in matches %}
+            <tr>
+              <td>{{ label }}</td>
+              <td>{{ detail }}</td>
+              <td>
+                <form method="post" style="display:inline">
+                  {% csrf_token %}
+                  <input type="hidden" name="action" value="import_one">
+                  <input type="hidden" name="code" value="{{ code }}">
+                  <input type="hidden" name="query" value="{{ query }}">
+                  <input type="submit" value="{% translate 'Import' %}">
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>{% translate "No matches." %}</p>
+    {% endif %}
+  {% endif %}
+
+  <h2>{% translate "Bulk actions" %}</h2>
+  <form method="post" style="display:inline">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="import_all">
+    <input type="submit" value="{% translate 'Import everything from the reference file' %}">
+  </form>
+
+  {% for slug, label, func in extra_actions %}
+    <form method="post" style="display:inline">
+      {% csrf_token %}
+      <input type="hidden" name="action" value="{{ slug }}">
+      <input type="submit" value="{{ label }}">
+    </form>
+  {% endfor %}
+{% endblock %}

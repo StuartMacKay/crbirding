@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 
+# Local SQLite database
+*.db
+*.sqlite3
+
 .*
 !.dockerignore
 !.editorconfig

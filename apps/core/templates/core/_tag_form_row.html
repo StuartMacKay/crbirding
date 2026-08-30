@@ -1,0 +1,47 @@
+<div class="tag-row bg-gray-50 border border-gray-200 rounded-lg p-3 grid grid-cols-2 sm:grid-cols-4 gap-3 items-end relative">
+  {{ form.id }}
+  {% for hidden in form.hidden_fields %}{% if hidden.name != "id" %}{{ hidden }}{% endif %}{% endfor %}
+
+  <div>
+    <label class="block text-xs font-medium text-gray-700">{{ form.position.label }}</label>
+    {{ form.position }}
+  </div>
+  <div>
+    <label class="block text-xs font-medium text-gray-700">{{ form.kind.label }}</label>
+    {{ form.kind }}
+  </div>
+  <div>
+    <label class="block text-xs font-medium text-gray-700">{{ form.colour.label }}</label>
+    {{ form.colour }}
+  </div>
+  <div>
+    <label class="block text-xs font-medium text-gray-700">{{ form.second_colour.label }}</label>
+    {{ form.second_colour }}
+  </div>
+  <div>
+    <label class="block text-xs font-medium text-gray-700">{{ form.inscription.label }}</label>
+    {{ form.inscription }}
+  </div>
+  <div>
+    <label class="block text-xs font-medium text-gray-700">{{ form.inscription_colour.label }}</label>
+    {{ form.inscription_colour }}
+  </div>
+  <div>
+    <label class="block text-xs font-medium text-gray-700">{{ form.inscription_direction.label }}</label>
+    {{ form.inscription_direction }}
+  </div>
+  <div class="flex items-center gap-2">
+    <label class="flex items-center gap-1.5 text-xs font-medium text-gray-700">
+      {{ form.uncertain }}
+      Not sure
+    </label>
+    <button type="button" onclick="this.closest('.tag-row').remove()"
+            class="ml-auto text-xs text-red-600 hover:text-red-800">
+      Remove
+    </button>
+  </div>
+
+  {% if form.errors %}
+    <div class="col-span-full text-xs text-red-600">{{ form.errors }}</div>
+  {% endif %}
+</div>
